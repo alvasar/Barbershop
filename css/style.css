@@ -1,0 +1,82 @@
+/* Шрифты 
+Raleway 700
+Open Sans 700 600 400 
+*/
+
+/* Цвета 
+
+#FFFFFF white (bcg, font)
+#FF6C00 accent, button
+#303030 h2 section-title, button, amount
+#555555 primary p
+#9DA4BD contact, copyright
+rgba(157, 164, 189, 0.4) contact
+rgba(157, 164, 189, 0.6) uppertitle
+rgba(157, 164, 189, 1) subtitle
+
+*/
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;}
+
+:root {
+    --bg-color:#FFFFFF;
+    --primary-text-color:#303030;
+    --uppertitle:rgba(157, 164, 189, 0.6);
+    --subtitle:rgba(157, 164, 189, 1);
+    --p-text: #555555;
+    --accent-color:#FF6C00;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* outline: 3px solid tomato; */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--p-text)
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* Утилиты */
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* Общее */
+
+
+/* header */
+
+/* hero */
+
+/* about */
+
+/* services */
+
+/* benefits */
+
+/* members */
+
+/* gallery */
+
+/* contacts */
+
+/* footer */

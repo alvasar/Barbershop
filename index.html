@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
     <title>Barbershop</title>
   </head>
   <body>
@@ -43,25 +48,25 @@
         </li class="item">
       </ul>
       <div class="hero-group">
-        <p class="uppertitle">A hair salon for men in Kyiv</p>
-        <h1 class="title">BarberShop</h1>
-        <p class="subtitle">
+        <p class="uppertitle" lang="en">A hair salon for men in Kyiv</p>
+        <h1 class="title" lang="en">BarberShop</h1>
+        <p class="subtitle" lang="en">
           We are experts in trendy men's haircuts. <br />
           We work quickly, carefully, and tastefully.
         </p>
       </div>
         <ul class="list">
-          <li class="item"> <button type="button" class="slider-button">Назад</button></li>
+          <li class="item"> <button type="button" class="slider-button">Вперед</button></li>
           <li class="item"> <button type="button" class="slider-button">Назад</button></li>
         </ul>
       </section>
 
-      <!-- Section about -->
+      <!-- section about -->
       <section class="about">
         <ul class="list">
           <li class="item">
             <img class="about-img"
-              src="./image/img-1.jpg"
+              src="./images/about/img-1.jpg"
               alt="Стрижка бороды"
               width="270"
               height="445"
@@ -69,7 +74,7 @@
           </li>
           <li class="item">
             <img class="about-img"
-              src="./image/img-2.jpg"
+              src="./images/about/img-2.jpg"
               alt="Стрижка головы"
               width="270"
               height="445"
@@ -118,30 +123,32 @@
         <button class="btn" type="button">Онлайн запись</button>
       </section>
 
-      <!-- Benefits -->
+      <!-- benefits -->
+      <!-- ul.list>li.item*4>p+p Охуела голова!-->
+
       <section class="benefits">
         <ul class="item">
           <li class="item">
-            <p>600 +</p>
-            <p> Довольных клиентов в день</p>
+            <p class="benefits-amount">600 <sup>+</sup></p>
+            <p class="benefits-text"> Довольных клиентов в день</p>
           </li>
           <li class="item">
-            <p>50 +</p>
-            <p>Наград за отличный сервис</p>
+            <p class="benefits-amount">50 <sup>+</sup></p>
+            <p class="benefits-text">Наград за отличный сервис</p>
           </li>
           <li class="item">
-            <p>20 +</p>
-            <p>Лучших мастеров Киева</p>
+            <p class="benefits-amount">20 <sup>+</sup></p>
+            <p class="benefits-text">Лучших мастеров Киева</p>
           </li>
           <li class="item">
-            <p>100 +</p>
-            <p>Подарков постоянным клиентам</p>
+            <p class="benefits-amount">100 <sup>+</sup></p>
+            <p class="benefits-text">Подарков постоянным клиентам</p>
           </li>
         </ul>
         <div class="benefits-group">
         <p class="uppertitle">Старая традиционная школа</p>
         <h2 class="section-title">Почему приходят именно к нам?</h2>
-        <p class="undertitle">
+        <p class="subtitle">
           О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать,
           чем 10 раз прочитать.
         </p>
@@ -152,27 +159,65 @@
       <section members>
         <p class="uppertitle">для настоящих ценителей атмосферы</p>
         <h2 class="section-title">Наши мастера</h2>
-        <ul class="list">
-          <li class="item"><img src="./images/team/member-1.jpg" alt="John Smith" width="370" /></li>
-          <li class="item"><img src="./images/team/member-2.jpg" alt="Michele Doe" width="370" /></li>
-          <li class="item"><img src="./images/team/member-3.jpg" alt="Alan Black" width="370" /></li>
+        <ul class="member-list">
+          <li class="member-item"><img class="member-img" src="./images/team/member-1.jpg" alt="John Smith" width="370" height="346" /></li>
+          <div class="member-group">
+            <h3 class="member-title" lang="en">John Smith</h3>
+            <p class="member-position" lang="en">Extreme Barber</p>
+            <ul class="social-list">
+              <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">instagram</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">twitter</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">facebook</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+            </ul>
+          </div>
+          <li class="member-item"><img class="member-img" src="./images/team/member-2.jpg" alt="Michele Doe" width="370" height="346" /></li>
+          <div class="member-group">
+            <h3 class="member-title">Michele Doe</h3>
+             <p class="member-position" lang="en">Extreme Barber</p>
+            <ul class="social-list">
+              <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">instagram</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">twitter</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">facebook</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+            </ul>
+             </div>
+          <li class="member-item"><img class="member-img" src="./images/team/member-3.jpg" alt="Alan Black" width="370" height="346"/></li>
+          <div class="member-group">
+            <h3 class="member-title" lang="en">Alan Black</h3>
+            <p class="member-position" lang="en">Extreme Barber</p>
+            <ul class="social-list">
+              <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">instagram</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">twitter</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">facebook</a></li>
+              <li class="social-item"> 
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+            </ul>
+          </div>
         </ul>
         <div>
           <h3 class="teamtitle" lang="uk"></h3>
           <p></p>
-          <ul class="social-list">
-          <li class="social-link">Instagram</li>
-          <li class="social-link">Twitter</li>
-          <li class="social-link">Facebook</li>
-          <li class="social-link">Linkedin</li>
-        </ul>
+
       </div>
       </section>
 
       <!-- gallery -->
       <section gallery>
         <p class="uppertitle">На латинском языке “барба” означает “борода”</p>
-        <h2 class="section-title">Примеры наших работ</h2>  паттерн вижуали хиден  
+        <!-- паттерн вижуали хиден Правилно спрятать! -->
+        <h2 class="section-title" hidden>Примеры наших работ</h2>   
         <ul class="list">
           <li class="item">
             <img class="gallery-img" src="./images/gallery/Rectangle25.jpg" alt="Rectangle25" width="270" height="360" />
@@ -189,7 +234,7 @@
         </ul>
       </section>
 
-      <!-- Contacts -->
+      <!-- contacts -->
       <section>
         <h2 class="section-title">Наши контакты</h2>
         <p>Онлайн запись</p>
