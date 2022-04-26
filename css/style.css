@@ -47,7 +47,7 @@ body {
     color: var(--p-text)
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-}
+    }
 
 /* Утилиты */
 .list {
@@ -60,10 +60,98 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.link {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
 /* Общее */
 
 
 /* header */
+.header {
+
+
+}
+
+
+
+/* navigation */
+
+.header-item.flex
+{
+    /* margin: 39px 55px 39px 39px; */
+
+    background-image: url(/images/slider/Slider-img-1.jpg);
+    background-position: right;
+    background-size:auto;
+}
+
+.header .menu {
+    display: flex;
+}
+
+.menu .link {
+    display: block;
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    color: var(--bg-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+    color: var(--accent-color);
+}
+
+.menu .item + .item {
+    margin-left: 40px;
+}
+.header-group {
+    display: flex;
+    display: inline-block;
+
+    margin-left: auto;
+}
+
+.header-group .item {
+    color: var(--bg-color);
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.header-group .item + .item {
+    margin-left: 40px;
+}
+
+.header-group .btn {
+    padding: 12px 20px;
+    
+    min-width: 160px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border-color: var(--accent-color);
+
+}
+
 
 /* hero */
 
