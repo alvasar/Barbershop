@@ -89,7 +89,15 @@ p {
 
 /* header */
 .header {
-/* position: relative; */
+position: absolute;
+}
+
+/*header-sidebar*/
+
+.header-sidebar {
+    background-color: var(--bg-color);
+    width: 140px;
+    position:relative;
 }
 
 /* navigation */
@@ -175,14 +183,13 @@ p {
     padding-top: 39px;
     padding-bottom: 40px;
 
-    background-image: url(/images/slider/Slider-img-1.jpg);
-    background-size:cover;
-    
+    background-image: url(/images/slider/Slider-img-3.jpg);
+    background-size: 100% 100%;
 }
 
 
 .hero-group { 
-    /* margin: 272px 525px 206px 100px;  */
+    margin: 272px 525px 206px 100px; 
 }
 
 .hero-group .uppertitle {
