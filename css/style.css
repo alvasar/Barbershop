@@ -184,7 +184,9 @@ position: absolute;
     padding-bottom: 40px;
 
     background-image: url(/images/slider/Slider-img-3.jpg);
-    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:contain;
 }
 
 
@@ -302,12 +304,22 @@ position: absolute;
 }
 
 /* services */
-.section.price {
-    background-image: url(/images/price/img.jpg);
-    background-size: cover;
-    /* filter: brightness(40%); */
-    /* color: #9DA4BD; */
+
+.price.overlay {
+    max-height: 718px;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-image: linear-gradient(to right,
+            rgba(17, 19, 25, 1),
+            rgba(17, 19, 25, 1)),
+            url("../images/price/img.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
 }
+
 .price .uppertitle {
     margin-left: 55px;
     
@@ -317,12 +329,30 @@ position: absolute;
 .price .section-title
 {
     margin-left: 55px;
-
     color: var(--bg-color);
 }
 
+.price .list {
+    margin: 0 55px 50px 55px;
+    color: var(--subtitle);
 
+}
+.price .list .overlay {
+    background-image: linear-gradient(to right,
+    rgba(23, 26, 36, 1),
+    rgba(23, 26, 36, 0.2));
+}
 
+.inner-list {
+    padding: 30px 40px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.centred {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /* benefits */
