@@ -1,0 +1,392 @@
+/* Шрифты 
+Raleway 700
+Open Sans 700 600 400 
+*/
+
+/* Цвета 
+
+#FFFFFF white (bcg, font)
+#FF6C00 accent, button
+#303030 h2 section-title, button, amount
+#555555 primary p
+#9DA4BD contact, copyright
+rgba(157, 164, 189, 0.4) contact
+rgba(157, 164, 189, 0.6) uppertitle
+rgba(157, 164, 189, 1) subtitle
+
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+
+:root {
+    /* fonts */
+    --main-font: 'Open+Sans', sans-serif;
+    --seondary-font: 'Raleway',sans-serif;
+
+
+    /* text colors*/
+    --accent-cl:#FF6C00;
+    --main-txt-cl:#555555;
+    --secondary-txt-cl:#303030;
+    --uppertitle:rgba(157, 164, 189, 0.6);
+    --subtitle:rgba(157, 164, 189, 1);
+
+    /* background colors */
+    --main-bg-cl:#FFFFFF;
+    --secondary-bg-cl:#F7F7F7;
+    --dark-bg-cl#191C26;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* outline: 3px solid tomato; */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--main-txt-cl)
+    font-family: var(--main-font), sans-serif;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+}
+
+
+/* Утилиты */
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+/* Общее */
+
+.section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+/* header */
+.header {
+position: absolute;
+background-color: #191c26;
+}
+
+.link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.btn {
+    font-family: inherit;
+    color: currentColor;
+}
+
+.link {
+    color: var(--main-bg-cl);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+/*header-sidebar*/
+
+.header-sidebar {
+    background-color: var(--bg-color);
+    width: 140px;
+    position:relative;
+}
+
+/* navigation */
+
+.header-item.flex
+{
+    margin: 39px 55px 39px 39px;
+
+}
+
+.header .menu {
+    display: flex;
+}
+
+.menu .link {
+    display: block;
+    padding-top: 21px;
+    padding-bottom: 21px;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+    color: var(--accent-color);
+}
+
+.menu .item + .item {
+    margin-left: 40px;
+}
+.header-group {
+    display: flex;
+    display: inline-block;
+
+    margin-left: auto;
+}
+
+.header-group .item {
+    color: var(--bg-color);
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.header-group .item + .item {
+    margin-left: 40px;
+}
+
+.btn {
+    padding: 12px 20px;
+    
+    min-width: 160px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border-color: var(--accent-color);
+}
+
+.btn.primary {
+    color: var(--bg-color);
+}
+
+.btn.secondary {
+    color: var(--primary-text-color);
+}
+
+
+/* hero */
+
+.section.hero {
+    padding-top: 39px;
+    padding-bottom: 40px;
+
+    background-image: url(/images/slider/Slider-img-3.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:contain;
+}
+
+
+.hero-group { 
+    margin: 272px 525px 206px 100px; 
+}
+
+.hero-group .uppertitle {
+    margin-bottom: 20px;
+
+    color: var(--uppertitle);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hero-group .title {
+    margin-bottom: 20px;
+
+    color: var(--bg-color);
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+}
+
+.hero-group .subtitle {
+
+    color: var(--subtitle);
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+ .slider.list {
+    display: flex;
+    align-items: center;
+}
+
+.slider.list .item {
+    display: block;
+    margin-left:auto;
+}
+
+.slider.list .item + .item {
+    margin-left: 48px;
+}
+
+/*  */
+.slider-button {
+    display: block;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    
+    color: var(--uppertitle);
+    border: 0;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: right;
+    letter-spacing: 0.1em;
+}
+
+.slider-button:hover,
+.slider-button:focus {
+    color: var(--bg-color);
+}
+
+/* about */
+
+.list.flex {
+    margin: 0 64px 0 55px;
+}
+
+.about .list .item + .item {
+    margin-left: 30px;
+}
+
+.uppertitle {
+    padding-bottom: 20px;
+    color: var(--primary-text-color);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.section-title {
+    padding-bottom: 20px;
+    color: var(--primary-text-color);
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+.subtitle {
+    padding-bottom: 20px;
+    color: var(--p-text);
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.description {
+    padding-bottom: 40px;
+    color: var(--p-text);
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+}
+
+/* services */
+
+.price.overlay {
+    max-height: 718px;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-image: linear-gradient(to right,
+            rgba(17, 19, 25, 1),
+            rgba(17, 19, 25, 1)),
+            url("../images/price/img.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+}
+
+.price .uppertitle {
+    margin-left: 55px;
+    
+    color: var(--uppertitle);
+}
+
+.price .section-title
+{
+    margin-left: 55px;
+    color: var(--bg-color);
+}
+
+.price .list {
+    margin: 0 55px 50px 55px;
+    color: var(--subtitle);
+
+}
+.price .list .overlay {
+    background-image: linear-gradient(to right,
+    rgba(23, 26, 36, 1),
+    rgba(23, 26, 36, 0.2));
+}
+
+.inner-list {
+    padding: 30px 40px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.centred {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* benefits */
+
+/* members */
+
+/* gallery */
+
+/* contacts */
+
+/* footer */
