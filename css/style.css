@@ -51,6 +51,17 @@ html {
     box-sizing: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     width: 1200px;
     padding-left: 15px;
@@ -93,6 +104,12 @@ body {
     padding: 0;
 }
 
+.section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    border: solid var(--accent-cl);
+}
+
 .btn {
     font-family: inherit;
     font-weight: 600;
@@ -102,6 +119,9 @@ body {
     text-transform: uppercase;
     background-color: transparent;
     cursor: pointer;
+    border: 1px solid var(--accent-cl);
+    border-radius: 25px;
+    padding: 12px 20px;
 }
 
 .btn:hover,
@@ -144,6 +164,15 @@ header section
     background-color: var(--dark-bg-cl);
 }
 
+.header .list {
+    display: flex;
+}
+
+.header .item:not(:last-child) {
+    margin-right: 40px;
+}
+
+
 .navigation-link,
 .header-phone {
     color: var(--secondary-txt-cl);
@@ -183,6 +212,8 @@ hero section
 
 .hero .uppertitle,
 .services .uppertitle {
+    margin-bottom: 20px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
@@ -192,6 +223,8 @@ hero section
 }
 
 .hero .title {
+    margin-bottom: 20px;
+
     font-family: var(--seondary-font);
     font-weight: 700;
     font-size: 72px;
@@ -216,10 +249,31 @@ about section
     background-color: var(--main-bg-cl);
 }
 
+.about > .container {
+    display: flex;
+}
+
+.about .list {
+    display: flex;
+    align-items: center;
+}
+
+.about .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+.about .about-group {
+    margin-left: 64px;
+
+}
+
 .about .uppertitle, 
 .benefits .uppertitle,
 .members .uppertitle,
 .gallery .uppertitle {
+    margin-bottom: 20px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
@@ -232,6 +286,8 @@ about section
 .benefits .title,
 .members .title,
 .gallery .title {
+    margin-bottom: 20px;
+
     font-family: var(--seondary-font);
     font-weight: 700;
     font-size: 42px;
@@ -242,6 +298,8 @@ about section
 
 .about .subtitle,
 .benefits .subtitle {
+    margin-bottom: 20px;
+
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;
@@ -250,6 +308,8 @@ about section
 }
 
 .about .description {
+    margin-bottom: 40px;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 1.86;
@@ -257,17 +317,33 @@ about section
     color: var(--main-txt-cl);
 }
 
+
 /* 
 ------------------------
 services section
 ------------------------
 */
 .services {
-    background-color: var(--dark-bg-cl);
+    /* background-color: var(--dark-bg-cl); */
 }
 
+.overlay {
+    height: 718px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right,
+            rgba(23, 26, 36, 1),
+            rgba(23, 26, 36, 0.4)),
+            url('../images/price/bg.jpg');
+background-repeat: no-repeat;
+background-size: cover;    
+}
+    
 .services .title,
 .contacts .title {
+    margin-bottom: 44px;
+
     font-family: var(--seondary-font);
     font-weight: 700;
     font-size: 42px;
@@ -276,7 +352,34 @@ services section
     color: var(--main-bg-cl);
 }
 
+.services .list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.services .item {
+    width: calc(100%/2);
+    height: 240px;
+}
+
+.services .item.left {
+    background: linear-gradient(to bottom, rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2));
+}
+
+.services .item.right {
+    background: linear-gradient(to bottom, rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2));
+}
+
+.services .inner-list {
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px;
+    display: grid;
+}
+
 .services .inner-item {
+ 
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67; 
@@ -284,12 +387,10 @@ services section
     color: var(--services-txt-cl);
 }
 
-.services .inner-list.left {
-    background: linear-gradient(to bottom, rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2))
-}
-
-.services .inner-list.right {
-    background: linear-gradient(to bottom, rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2))
+.services .btn-mode-dark {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* 
@@ -299,6 +400,14 @@ benefits section
 */
 .benefits {
     background-color: var(--main-bg-cl);
+}
+
+.benefits > .container {
+    display: flex;
+}
+
+.benefits .list {
+    display: flex;
 }
 
 .benefits .item {
@@ -329,6 +438,11 @@ benefits section
     text-align: center;
     color: var(--btn-dark-cl);
 }
+
+.benefits .benefits-group {
+    margin-left: 130px;
+}
+
 /* 
 ------------------------
 members section
@@ -337,6 +451,10 @@ members section
 
 .members {
     background-color: var(--secondary-bg-cl);
+}
+
+.members .title {
+    margin-bottom: 44px;
 }
 
 .members .member-list {
@@ -348,21 +466,39 @@ members section
 /* member-card */
 
 .members .member-item {
-    /* margin-right: 30px; */
     width: calc((100%-60px)/3);
 }
 
 .members .member-item:not(:last-child) {
-margin-right: 30px;
+    margin-right: 30px;
 }
 
-.members .member-group {
+.members .member-img {
+    margin-bottom: 30px;
+    
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
+.members .member-title {
+    margin-bottom: 8px;
+}
+
+.members .member-position {
+    margin-bottom: 30px;
+}
+
+.members .social-list  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.members .social-item:not(:last-child) {
+    margin-right: 10px;
 }
    
-
-
-
 .members .member-title {
     font-weight: 400;
     font-size: 18px;
@@ -384,9 +520,10 @@ margin-right: 30px;
     display: block;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
     color: var(--btn-dark-cl);
     background-color: var(--main-bg-cl);
+    padding: 12px;
+    border-radius: 50%;
 }
 
 .social-link:hover,
@@ -406,6 +543,10 @@ gallery section
 */
 .gallery {
     background-color: var(--main-bg-cl);
+}
+
+.gallery .uppertitle {
+    margin-bottom: 44px;
 }
 
 .gallery .list {
@@ -430,6 +571,27 @@ contacts section
 .contacts {
     background-color: var(--dark-bg-cl);
 }
+
+.contacts > .container {
+    display: flex;
+}
+
+.contacts .contact-group {
+    width: calc(100%/2);
+}
+
+/* .contact-group .left {
+    background-color: var(--dark-bg-cl);
+}*/
+
+.contact-group.right {
+    margin-left: 100px;
+    /* background-image: linear-gradient(
+        rgba(25, 28, 38, 1),
+        rgba(25, 28, 38, 0.8)),
+    url('../images/contact/Bg.jpg'); */
+} 
+
 .contacts .list {
     font-weight: 400;
     font-size: 18px;
@@ -438,6 +600,15 @@ contacts section
     letter-spacing: 0.02em;
     color:var(--services-txt-cl)
 }
+
+.contacts .item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contacts .item:nth-last-child(1) {
+    margin-bottom: 70px;
+}
+
 
 .contacts .time-title {
     font-weight: 600;
