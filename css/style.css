@@ -607,8 +607,8 @@ contacts section
 
 .contacts .item:nth-last-child(1) {
     margin-bottom: 70px;
+    text-decoration: underline;
 }
-
 
 .contacts .time-title {
     font-weight: 600;
@@ -634,6 +634,7 @@ footer section
 */
 .footer {
     background-color: var(--main-bg-cl);
+    height: 127px;
 }
 
 .footer > .container {
@@ -641,6 +642,7 @@ footer section
 }
 
 .footer .copyright {
+    
 
     font-weight: 600;
     font-size: 11px;
@@ -653,9 +655,4 @@ footer section
     display: flex;
     align-items: center;
 }
-
-/* .footer .item {
-    display: inline-block;
-    margin-right: auto;
-} */
 
