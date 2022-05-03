@@ -191,8 +191,7 @@ hero section
     color: var(--uppertitle);
 }
 
-.hero .title,
-.services .title {
+.hero .title {
     font-family: var(--seondary-font);
     font-weight: 700;
     font-size: 72px;
@@ -267,8 +266,14 @@ services section
     background-color: var(--dark-bg-cl);
 }
 
-.services .title {
+.services .title,
+.contacts .title {
+    font-family: var(--seondary-font);
+    font-weight: 700;
+    font-size: 42px;
     line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: var(--main-bg-cl);
 }
 
 .services .inner-item {
@@ -334,7 +339,29 @@ members section
     background-color: var(--secondary-bg-cl);
 }
 
+.members .member-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 /* member-card */
+
+.members .member-item {
+    /* margin-right: 30px; */
+    width: calc((100%-60px)/3);
+}
+
+.members .member-item:not(:last-child) {
+margin-right: 30px;
+}
+
+.members .member-group {
+
+}
+   
+
+
 
 .members .member-title {
     font-weight: 400;
@@ -381,12 +408,83 @@ gallery section
     background-color: var(--main-bg-cl);
 }
 
-.gallery .uppertitle {
-
+.gallery .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.gallery .title.
+.gallery .item {
+    margin-right: 30px;
+    width: calc((100%-120px)/4);
+}
+.gallery .item:nth-child(4n) {
+    margin-right: 0;
+}
+/* 
+------------------------
+contacts section
+------------------------
+*/
 
-/* contacts */
+.contacts {
+    background-color: var(--dark-bg-cl);
+}
+.contacts .list {
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color:var(--services-txt-cl)
+}
 
-/* footer */
+.contacts .time-title {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondary-txt-cl);
+}
+
+.contacts .time {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color:var(--services-txt-cl);
+}
+
+/* 
+------------------------
+footer section
+------------------------
+*/
+.footer {
+    background-color: var(--main-bg-cl);
+}
+
+.footer > .container {
+    display: flex;
+}
+
+.footer .copyright {
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color:var(--services-txt-cl);
+}
+
+.footer .list {
+    display: flex;
+    align-items: center;
+}
+
+/* .footer .item {
+    display: inline-block;
+    margin-right: auto;
+} */
+
