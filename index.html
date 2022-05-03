@@ -91,29 +91,30 @@
         </ul>
         <div class="about-group">
           <p class="uppertitle">О нас</p>
-          <h2 class="section-title">Лучший Барбершоп твоего города</h2>
+          <h2 class="title">Лучший Барбершоп твоего города</h2>
           <p class="subtitle">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </p>
-            <p class="description">
+          <p class="description">
               Мы команда, которая никогда не останавливается на достигнутом и
               жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
               никогда не сможешь быть прежним. Мы команда, которая всегда с
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-        <button class="btn" type="button">Онлайн запись</button>
+        <button class="btn .btn-mode-light" type="button">Онлайн запись</button>
         </div>
       </section>
 
       <!-- section services -->
-      <section class="section">
+      <section class="section services">
+        <div class="container">
         <p class="uppertitle">Проведи время в компании лучших мастеров</p>
         <h2 class="title">Услуги и цены</h2>
         <ul class="list">
           <li class="item">
-            <ul class="inner-list">
+            <ul class="inner-list left list">
               <li class="inner-item">Мужская стрижка от 300 грн.</li>
               <li class="inner-item">Стрижка бороды от 200 грн.</li>
               <li class="inner-item">Стрижка усов от 200 грн.</li>
@@ -121,7 +122,7 @@
             </ul>
           </li>
           <li class="item">
-              <ul class="inner-list">
+              <ul class="inner-list right list">
                <li class="inner-item">Cтрижка у стажера от 50 грн.</li>
                <li class="inner-item">Стрижка под насадку от 200 грн.</li>
                <li class="inner-item">Детская стрижка (до 12 лет) от 300 грн.</li>
@@ -129,8 +130,7 @@
             </ul>
           </li>
         </ul>
-        <div class="centred">
-        <button class="btn" type="button">Онлайн запись</button>
+        <button class="btn btn-mode-dark" type="button">Онлайн запись</button>
         </div>
       </section>
 
@@ -138,97 +138,119 @@
       <!-- ul.list>li.item*4>p+p Охуела голова!-->
 
       <section class="benefits">
-        <ul class="item">
+        <div class="container">
+        <ul class="list">
           <li class="item">
-            <p class="benefits-amount">600 <sup>+</sup></p>
+            <p class="benefits-amount">600 <sup class="plus">+</sup></p>
             <p class="benefits-text"> Довольных клиентов в день</p>
           </li>
           <li class="item">
-            <p class="benefits-amount">50 <sup>+</sup></p>
+            <p class="benefits-amount">50 <sup class="plus">+</sup></p>
             <p class="benefits-text">Наград за отличный сервис</p>
           </li>
           <li class="item">
-            <p class="benefits-amount">20 <sup>+</sup></p>
+            <p class="benefits-amount">20 <sup class="plus">+</sup></p>
             <p class="benefits-text">Лучших мастеров Киева</p>
           </li>
           <li class="item">
-            <p class="benefits-amount">100 <sup>+</sup></p>
+            <p class="benefits-amount">100 <sup class="plus">+</sup></p>
             <p class="benefits-text">Подарков постоянным клиентам</p>
           </li>
         </ul>
         <div class="benefits-group">
         <p class="uppertitle">Старая традиционная школа</p>
-        <h2 class="section-title">Почему приходят именно к нам?</h2>
+        <h2 class="title">Почему приходят именно к нам?</h2>
         <p class="subtitle">
           О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать,
           чем 10 раз прочитать.
         </p>
       </div>
+       </div>
       </section>
 
       <!-- members -->
-      <section members>
+      <section class= "members">
+        <div class="container">
         <p class="uppertitle">для настоящих ценителей атмосферы</p>
-        <h2 class="section-title">Наши мастера</h2>
-        <ul class="member-list">
+        <h2 class="title">Наши мастера</h2>
+        <ul class="member-list list">
           <li class="member-item"><img class="member-img" src="./images/team/member-1.jpg" alt="John Smith" width="370" height="346" /></li>
           <div class="member-group">
             <h3 class="member-title" lang="en">John Smith</h3>
             <p class="member-position" lang="en">Extreme Barber</p>
-            <ul class="social-list">
+            <ul class="social-list list">
               <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">instagram</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">twitter</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">facebook</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
+                </li>
+                           <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
+                </li>
+                            <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
+                </li>
+                            <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
+                </li>
             </ul>
           </div>
           <li class="member-item"><img class="member-img" src="./images/team/member-2.jpg" alt="Michele Doe" width="370" height="346" /></li>
           <div class="member-group">
             <h3 class="member-title">Michele Doe</h3>
              <p class="member-position" lang="en">Extreme Barber</p>
-            <ul class="social-list">
+            <ul class="social-list list">
               <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">instagram</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">twitter</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">facebook</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
+                </li>
+                           <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
+                </li>
+                            <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
+                </li>
+                            <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
+                </li>
             </ul>
              </div>
           <li class="member-item"><img class="member-img" src="./images/team/member-3.jpg" alt="Alan Black" width="370" height="346"/></li>
           <div class="member-group">
             <h3 class="member-title" lang="en">Alan Black</h3>
             <p class="member-position" lang="en">Extreme Barber</p>
-            <ul class="social-list">
+            <ul class="social-list list">
               <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">instagram</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">twitter</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">facebook</a></li>
-              <li class="social-item"> 
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
+                </li>
+                           <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
+                </li>
+                            <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
+                </li>
+                            <li class="social-item">
+                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
+                </li>
             </ul>
           </div>
         </ul>
-        <div>
-          <h3 class="teamtitle" lang="uk"></h3>
-          <p></p>
-
       </div>
       </section>
 
       <!-- gallery -->
-      <section gallery>
+      <section class="gallery">
         <p class="uppertitle">На латинском языке “барба” означает “борода”</p>
-        <!-- паттерн вижуали хиден Правилно спрятать! -->
-        <h2 class="section-title visually-hidden" hidden>Примеры наших работ</h2>   
+        <h2 class="title visually-hidden visually-hidden" >Примеры наших работ</h2>   
         <ul class="list">
           <li class="item">
             <img class="gallery-img" src="./images/gallery/Rectangle25.jpg" alt="Rectangle25" width="270" height="360" />

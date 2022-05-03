@@ -30,6 +30,7 @@ html {
     /* text colors*/
     --accent-cl:#FF6C00;
     --main-txt-cl:#555555;
+    --services-txt-cl:#9DA4BD;
     --secondary-txt-cl:#FFFFFF;
     --uppertitle:rgba(157, 164, 189, 0.6);
     --subtitle:rgba(157, 164, 189, 1);
@@ -84,6 +85,12 @@ body {
 .link {
     text-decoration: none;
     color: currentColor;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .btn {
@@ -147,6 +154,11 @@ header section
     text-decoration: none;
 }
 
+.navigation-link:hover,
+.navigation-link:focus {
+    color: var(--accent-cl);
+}
+
 /* 
 ------------------------
 hero section
@@ -169,7 +181,8 @@ hero section
     color: var(--accent-cl);
 }
 
-.hero .uppertitle {
+.hero .uppertitle,
+.services .uppertitle {
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
@@ -178,7 +191,8 @@ hero section
     color: var(--uppertitle);
 }
 
-.hero .title {
+.hero .title,
+.services .title {
     font-family: var(--seondary-font);
     font-weight: 700;
     font-size: 72px;
@@ -199,13 +213,179 @@ hero section
 about section
 ------------------------
 */
+.about {
+    background-color: var(--main-bg-cl);
+}
 
+.about .uppertitle, 
+.benefits .uppertitle,
+.members .uppertitle,
+.gallery .uppertitle {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--btn-dark-cl);
+}
 
-/* benefits */
+.about .title,
+.benefits .title,
+.members .title,
+.gallery .title {
+    font-family: var(--seondary-font);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: var(--btn-dark-cl);
+}   
 
-/* members */
+.about .subtitle,
+.benefits .subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--main-txt-cl);
+}
 
-/* gallery */
+.about .description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color: var(--main-txt-cl);
+}
+
+/* 
+------------------------
+services section
+------------------------
+*/
+.services {
+    background-color: var(--dark-bg-cl);
+}
+
+.services .title {
+    line-height: 1.17;
+}
+
+.services .inner-item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67; 
+    letter-spacing: 0.02em;
+    color: var(--services-txt-cl);
+}
+
+.services .inner-list.left {
+    background: linear-gradient(to bottom, rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2))
+}
+
+.services .inner-list.right {
+    background: linear-gradient(to bottom, rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2))
+}
+
+/* 
+------------------------
+benefits section
+------------------------
+*/
+.benefits {
+    background-color: var(--main-bg-cl);
+}
+
+.benefits .item {
+    background-color: var(--secondary-bg-cl);
+}
+
+.benefits .benefits-amount {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--btn-dark-cl);
+}
+
+.benefits .plus {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.37;
+    text-align: center;
+    color: var(--accent-cl);
+ }
+
+.benefits .benefits-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+    color: var(--btn-dark-cl);
+}
+/* 
+------------------------
+members section
+------------------------
+*/
+
+.members {
+    background-color: var(--secondary-bg-cl);
+}
+
+/* member-card */
+
+.members .member-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--btn-dark-cl);
+}
+.members .member-position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--accent-cl);
+}
+
+.social-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--btn-dark-cl);
+    background-color: var(--main-bg-cl);
+}
+
+.social-link:hover,
+.social-link:focus {
+    color: var(--accent-cl);
+    background-color: var(--main-bg-cl);
+}
+
+.social-icon {
+    fill: currentColor;
+}
+
+/* 
+------------------------
+gallery section
+------------------------
+*/
+.gallery {
+    background-color: var(--main-bg-cl);
+}
+
+.gallery .uppertitle {
+
+}
+
+.gallery .title.
 
 /* contacts */
 
