@@ -360,7 +360,6 @@ background-size: cover;
 
 .services .item {
     width: calc(100%/2);
-    height: 240px;
 }
 
 .services .item.left {
@@ -375,7 +374,7 @@ background-size: cover;
     width: 100%;
     height: 100%;
     padding: 30px 40px;
-    display: grid;
+    display: block;
 }
 
 .services .inner-item {
@@ -608,6 +607,13 @@ contacts section
 .contacts .item:nth-last-child(1) {
     margin-bottom: 70px;
     text-decoration: underline;
+}
+
+.icon-map-pin,
+.icon-phone,
+.icon-mail {
+    margin-right: 16px;
+
 }
 
 .contacts .time-title {
