@@ -44,12 +44,12 @@ html {
     --btn-dark-cl: #303030;
 }
 
-
+/* 
 *,
 *::before,
 *::after {
     box-sizing: inherit;
-}
+} */
 
 h1,
 h2,
@@ -164,6 +164,11 @@ header section
     background-color: var(--dark-bg-cl);
 }
 
+.header > .container {
+    display: flex;
+    align-items: center;
+}
+
 .header .list {
     display: flex;
 }
@@ -172,9 +177,20 @@ header section
     margin-right: 40px;
 }
 
+.header .header-group {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-phone {
+    margin-right: 40px;
+}
+
 
 .navigation-link,
 .header-phone {
+    display: block;
     color: var(--secondary-txt-cl);
     font-weight: 600;
     font-size: 12px;
@@ -182,6 +198,7 @@ header section
     letter-spacing: 0.1em;
     text-decoration: none;
 }
+
 
 .navigation-link:hover,
 .navigation-link:focus {
