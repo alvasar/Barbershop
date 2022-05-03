@@ -187,7 +187,6 @@ header section
     margin-right: 40px;
 }
 
-
 .navigation-link,
 .header-phone {
     display: block;
@@ -533,12 +532,13 @@ members section
 }
 
 .social-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 44px;
     height: 44px;
     color: var(--btn-dark-cl);
     background-color: var(--main-bg-cl);
-    padding: 12px;
     border-radius: 50%;
 }
 
