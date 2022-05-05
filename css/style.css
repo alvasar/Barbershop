@@ -44,13 +44,6 @@ html {
     --btn-dark-cl: #303030;
 }
 
-/* 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-} */
-
 h1,
 h2,
 h3,
@@ -62,15 +55,6 @@ p {
     padding: 0;
 }
 
-.container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    /* outline: 3px solid tomato; */
-}
-
 body {
     background-color: var(--bg-color);
     color: var(--main-txt-cl)
@@ -78,6 +62,15 @@ body {
     font-size: 14px;
     line-height: 1.86;
     letter-spacing: 0.02em;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* outline: 3px solid tomato; */
 }
 
 .visually-hidden {
@@ -162,6 +155,7 @@ header section
 
 .header {
     background-color: var(--dark-bg-cl);
+    position: relative;
 }
 
 .header > .container {
@@ -211,6 +205,11 @@ hero section
 */
 .hero {
     background-color: var(--dark-bg-cl);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .hero .link {
@@ -332,30 +331,47 @@ about section
     letter-spacing: 0.02em;
     color: var(--main-txt-cl);
 }
-
-
 /* 
 ------------------------
 services section
 ------------------------
 */
-.services {
-    /* background-color: var(--dark-bg-cl); */
+
+.services { 
+    position: relative;
+    /* background-image: url('../images/price/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(17, 19, 25, 1);
+    opacity: 1; */
+
+    background-image: url('../images/price/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.overlay {
+.services::before {
+    display: inline-block;
+    content: '';
+    background-color: rgba(17, 19, 25, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* .overlay {
     height: 718px;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(to right,
-            rgba(23, 26, 36, 1),
-            rgba(23, 26, 36, 0.4)),
+    background-image: linear-gradient(to bottom,
+            rgba(17, 19, 25, 1),
+            rgba(17, 19, 25, 0.8)),
             url('../images/price/bg.jpg');
 background-repeat: no-repeat;
-background-size: cover;    
-}
-    
+background-size: cover;  
+} */
+     
 .services .title,
 .contacts .title {
     margin-bottom: 44px;
