@@ -1,0 +1,32 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    align-content: center;
+    
+
+    width: 800px;
+    height: 600px;
+
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    background-color: blueviolet;
+}
+
+.inner-box {
+    width:120px;
+    height: 120px;
+    text-align: center;
+    padding-top: 10px;
+
+    background-color: #fff;
+    border-radius: 20px;
+
+    outline: 3px red solid;
+}
