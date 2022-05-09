@@ -131,6 +131,14 @@ body {
     color: var(--secondary-txt-cl); 
 }
 
+.hero .slider {
+    display: flex;
+}
+
+.slider .item:not(:last-child) {
+    margin-right: 10px;
+}
+
 .slider-btn {
     font-weight: 600;
     font-size: 11px;
@@ -140,6 +148,9 @@ body {
     color: var(--main-bg-cl);
     background-color: transparent;
     cursor: pointer;
+
+    border:0;
+    border-bottom: 1px solid var(--main-bg-cl);
 }
 
 .slider-btn-disable {
@@ -205,11 +216,15 @@ hero section
 */
 .hero {
     background-color: var(--dark-bg-cl);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
+}
+
+.hero .list {
+    display: flex;
+}
+
+.hero .item:not(:last-child) {
+    margin-right: 10px;
 }
 
 .hero .link {
@@ -277,16 +292,11 @@ about section
     margin-right: 30px;
 }
 
-
 .about .about-group {
     margin-left: 64px;
-
 }
 
-.about .uppertitle, 
-.benefits .uppertitle,
-.members .uppertitle,
-.gallery .uppertitle {
+.uppertitle {
     margin-bottom: 20px;
 
     font-weight: 600;
@@ -297,10 +307,7 @@ about section
     color: var(--btn-dark-cl);
 }
 
-.about .title,
-.benefits .title,
-.members .title,
-.gallery .title {
+.title {
     margin-bottom: 20px;
 
     font-family: var(--seondary-font);
@@ -673,7 +680,7 @@ footer section
 */
 .footer {
     background-color: var(--main-bg-cl);
-    height: 127px;
+    padding: 54px;
 }
 
 .footer > .container {
