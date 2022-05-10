@@ -115,6 +115,9 @@ body {
     border: 1px solid var(--accent-cl);
     border-radius: 25px;
     padding: 12px 20px;
+    min-width: 160px;
+    max-width: 200px;
+    min-height: 40px;
 }
 
 .btn:hover,
@@ -131,15 +134,16 @@ body {
     color: var(--secondary-txt-cl); 
 }
 
-.hero .slider {
-    display: flex;
-}
+/* slider */
 
 .slider .item:not(:last-child) {
     margin-right: 10px;
 }
 
 .slider-btn {
+    width: 60px;
+    height: 24px;
+
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
@@ -156,7 +160,10 @@ body {
 .slider-btn-disable {
     text-align: left;
     color: var(--uppertitle);
+    border-bottom: 1px solid var(--uppertitle);
 }
+
+
 
 /* 
 ------------------------
@@ -172,6 +179,11 @@ header section
 .header > .container {
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.header .logo {
+    margin-right: 71px;
 }
 
 .header .list {
@@ -201,11 +213,17 @@ header section
     line-height: 1.33;
     letter-spacing: 0.1em;
     text-decoration: none;
+    padding: 52px 0 52px 0;
 }
 
 
 .navigation-link:hover,
 .navigation-link:focus {
+    color: var(--accent-cl);
+}
+
+.header-phone:hover,
+.header-phone:focus {
     color: var(--accent-cl);
 }
 
@@ -224,7 +242,7 @@ hero section
 }
 
 .hero .item:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 40px;
 }
 
 .hero .link {
@@ -252,6 +270,10 @@ hero section
     color: var(--uppertitle);
 }
 
+.hero-group {
+    width: 475px;
+}
+
 .hero .title {
     margin-bottom: 20px;
 
@@ -270,6 +292,10 @@ hero section
     letter-spacing: 0.02em;
     color: var(--subtitle);
 }
+
+.hero .slider {
+    
+}
 /* 
 ------------------------
 about section
@@ -286,6 +312,7 @@ about section
 .about .list {
     display: flex;
     align-items: center;
+    margin-right: 64px;
 }
 
 .about .item:not(:last-child) {
@@ -293,11 +320,15 @@ about section
 }
 
 .about .about-group {
-    margin-left: 64px;
+    width: 500px;
 }
 
 .uppertitle {
+    overflow: hidden;
+    position: relative;
+
     margin-bottom: 20px;
+
 
     font-weight: 600;
     font-size: 11px;
@@ -305,6 +336,17 @@ about section
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--btn-dark-cl);
+}
+
+.about .uppertitle::before {
+    display: block; 
+    width: 60px;
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid var(--btn-dark-cl);
+    top: 50%; 
+    left: 0;
+    margin-right: 20px;
 }
 
 .title {
@@ -689,7 +731,6 @@ footer section
 
 .footer .copyright {
     
-
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
@@ -700,5 +741,9 @@ footer section
 .footer .list {
     display: flex;
     align-items: center;
+}
+
+.footer .link {
+    padding: 24px;
 }
 
