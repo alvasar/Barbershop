@@ -195,7 +195,12 @@ body {
     color: var(--uppertitle);
     border-bottom: 1px solid var(--uppertitle);
     
-  }
+    /* position:relative;
+    top: 0px;
+    right: -450px;
+    outline: 1px solid tomato; */
+
+}
 /*#endregion*/
 /*#region header*/
 .header { 
@@ -214,15 +219,11 @@ body {
 }
 
 .header .logo {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    right: 50%;
-    cursor: pointer;
-}
-
-.navigation {
-    margin-left: 10%;
+    margin-right: 71px;
+    display: flex;
+    align-items: center;
+    transform: translateX(-37px);
+    transform-origin: top left;
 }
 
 .header .list {
@@ -258,6 +259,18 @@ body {
 .navigation-link {
     position: relative;
 }
+
+/* .navigation-link.current::after {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-cl);
+} */
 
 .navigation-link:hover,
 .navigation-link:focus {
@@ -332,37 +345,26 @@ body {
 .hero {
     background-color: var(--dark-bg-cl);
     background-image: 
-    url('../images/slider/slider-img-1.jpg'),  
-    linear-gradient(to right, #fff 10%, #191C26 10%);
-    background-size: 1200px 680px, cover;
+    url('../images/slider/slider-img-2.jpg'), 
+    linear-gradient(to right, #fff 12%, #191C26 12%);
+    background-size: 1187px 680px, contain;
     background-position: top right, center;
     background-repeat: no-repeat;
     height: 480px;
-    position: relative;
 }
 
-.left-side {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 12%;
-    height: 100%;
-    background-color: #FFFFFF;
-}
+/*  */
 
 .hero .container {
     display: flex;
     position: relative;
-    pointer-events: none;
 }
 
 .socials-list {
     display: flex;
     align-items: center;
-    position: absolute;
-    left: -20px;
-    bottom: 140px;
-    transform: rotate(-90deg);
+    transform: translateX(-10px) translateY(100px) rotate(-90deg);
+    transform-origin: top left;
 }
 
 .socials-list::before {
@@ -372,11 +374,18 @@ body {
     border-bottom: 1px solid;
     margin-right: 40px;
     color: var(--btn-dark-cl);
+
+}
+
+.hero-left-side {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 100px;
 }
 
 .hero .list {
     display: flex;
-    /* outline: 1px dotted tomato; */
+    outline: 1px dotted tomato;
 
 }
 
@@ -416,9 +425,7 @@ body {
 }
 
 .hero-group {
-    width: 475px;
-    margin-left: 10%;
-
+        width: 475px;
 }
 
 .slider-pagination {
