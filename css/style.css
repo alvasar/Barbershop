@@ -370,7 +370,8 @@ body {
   border-radius: 2%;
 
   width: 500px;
-  height: 400px;
+
+  padding: 20px;
 
   transition: transform 300ms ease-in-out 200ms, opacity 300ms ease-in-out 200ms;
 }
@@ -413,6 +414,157 @@ body {
 
 }
 
+/* Modalka-form */
+
+.modal-form .title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: currentColor;
+}
+
+.modal-form .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  position: relative;
+}
+
+.modal-form .label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: currentColor;
+  margin-bottom: 4px;
+}
+
+.modal-form .input {
+
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  padding-left: 30px;
+  font: inherit;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.modal-form .input:focus,
+.modal-form .input:active {
+  outline: 0;
+  border-color: var(--accent-cl);
+}
+
+.modal-form .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: currentColor;
+
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+}
+
+.modal-form .field:focus-within .icon {
+  fill: var(--accent-cl);
+}
+
+.modal-form .comment {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 16px 12px;
+
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.modal-form .comment::placeholder {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form .comment:focus,
+.modal-form .comment:active {
+  outline: 0;
+  border-color: var(--accent-cl);
+}
+
+.checkbox-field {
+  position: relative;
+
+  display: block;
+  margin-bottom: 30px;
+}
+
+.checkbox-field .icon {
+  position: absolute;
+  top: 4px;
+  left: 0;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+  fill: var(--main-bg-cl);
+
+  border: 2px solid var(--btn-dark-cl);
+}
+
+.checkbox:focus+.icon {
+  border-color: var(--accent-cl);
+  fill: var(--main-bg-cl);
+}
+
+.checkbox:hover+.icon {
+  border-color: var(--accent-cl);
+  fill: var(--main-bg-cl);
+}
+
+.checkbox:checked+.icon {
+  border-color: transparent;
+  background-color: var(--accent-cl);
+  background-image: url('../images/icons.svg#icon-check');
+  background-position: center;
+  background-size: contain;
+  background-origin: border-box;
+  fill: var(--main-bg-cl);
+}
+
+.checkbox-field .label {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: currentColor;
+}
+
+.checkbox-field .link {
+  color: var(--accent-cl);
+}
+
+.modal-form .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  min-width: 200px;
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+}
 
 /*#endregion*/
 /*#region hero*/
@@ -926,6 +1078,145 @@ body {
 
 .contact-group .left {
   background-color: var(--dark-bg-cl);
+}
+
+/*Contact-form */
+
+.contact-form .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  position: relative;
+}
+
+.contact-form .label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-txt-cl);
+  margin-bottom: 4px;
+}
+
+.contact-form .input {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  padding-left: 30px;
+  font: inherit;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.contact-form .input:focus,
+.contact-form .input:active {
+  outline: 0;
+  border-color: var(--accent-cl);
+}
+
+.contact-form .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: currentColor;
+
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+}
+
+.contact-form .field:focus-within .icon {
+  fill: var(--accent-cl);
+}
+
+.contact-form .comment {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 16px 12px;
+
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.contact-form .comment::placeholder {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--btn-dark-cl);
+}
+
+.contact-form .comment:focus,
+.contact-form .comment:active {
+  outline: 0;
+  border-color: var(--accent-cl);
+}
+
+.contact-form .checkbox-field {
+  position: relative;
+
+  display: block;
+  margin-bottom: 30px;
+}
+
+.contact-form .checkbox-field .icon {
+  position: absolute;
+  top: 4px;
+  left: 0;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+  fill: var(--dark-bg-cl);
+
+  border: 2px solid var(--btn-dark-cl);
+}
+
+.contact-form .checkbox:focus+.icon {
+  border-color: var(--accent-cl);
+  fill: var(--dark-bg-cl);
+}
+
+.contact-form .checkbox:hover+.icon {
+  border-color: var(--accent-cl);
+  fill: var(--dark-bg-cl);
+}
+
+.contact-form .checkbox:checked+.icon {
+  border-color: transparent;
+  background-color: var(--accent-cl);
+  background-image: url('../images/icons.svg#icon-check');
+  background-position: center;
+  background-size: contain;
+  background-origin: border-box;
+  fill: var(--main-bg-cl);
+}
+
+.contact-form .checkbox-field .label {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--main-bg-cl);
+}
+
+.contact-form .checkbox-field .link {
+  color: var(--accent-cl);
+}
+
+.contact-form .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  min-width: 200px;
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .contact-group.right {
