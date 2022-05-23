@@ -135,7 +135,6 @@ body {
 .section {
   padding-top: 130px;
   padding-bottom: 130px;
-  outline: 1px dotted navy;
 }
 
 .btn {
@@ -178,7 +177,7 @@ body {
 .slider-controls {
   position: absolute;
   right: 0;
-  bottom: 40px;
+  bottom: -150px;
 
   display: flex;
   align-items: center;
@@ -208,9 +207,6 @@ body {
 
   position:relative;
   top: 0px;
-  right: -450px;
-  outline: 1px solid tomato;
-
 }
 
 .slider-pagination {
@@ -237,12 +233,6 @@ body {
   background-color: var(--main-bg-cl);
 }
 
-.slider-controls {
-  position: absolute;
-  right: 0;
-  bottom: -50px;
-}
-
 /*#endregion*/
 /*#region header*/
 .header {
@@ -261,6 +251,7 @@ body {
 
 .header .logo {
   margin-right: 71px;
+  transform: translateX(20px);
 }
 
 .header .list {
@@ -374,27 +365,34 @@ body {
 /*#endregion*/
 /*#region hero*/
 .hero {
+  max-width: 1280px;
+  min-height: 680px;
+  margin: 0 auto;
+
   background-color: var(--dark-bg-cl);
-  /* background-image:
-    url('../images/slider/slider-img-2.jpg'),
+  background-image:
+    url('../images/slider/slider-img-3.jpg'),
     linear-gradient(to right, #fff 12%, #191C26 12%);
-  background-size: 1187px 680px, contain;
+  background-size: 1125px 680px, contain;
   background-position: top right, center;
-  background-repeat: no-repeat; */
-  height: 680px;
+  background-repeat: no-repeat;
 }
 
-/*  */
-
 .hero .container {
-  /* display: flex; */
+  display: flex;
   position: relative;
+
+}
+.hero-left-side {
+  flex-basis: 100px;
+  align-items: flex-end;
+  
 }
 
 .socials-list {
   display: flex;
   align-items: center;
-  transform: translateX(-10px) translateY(100px) rotate(-90deg);
+  transform: translateX(40px) translateY(100px) rotate(-90deg);
   transform-origin: top left;
 }
 
@@ -416,9 +414,7 @@ body {
 
 .hero .list {
   display: flex;
-  /* outline: 1px dotted tomato; */
 }
-
 
 
 .hero .item:not(:last-child) {
@@ -468,6 +464,8 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--main-bg-cl);
+
+
 }
 
 .hero .subtitle {
