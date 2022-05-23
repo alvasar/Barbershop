@@ -31,7 +31,15 @@
       <path fill="none" stroke="#9da4bd" style="stroke:var(--color1, #9da4bd)" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.333" d="M6.4 6.667h19.2c1.32 0 2.4 1.05 2.4 2.333v14c0 1.283-1.08 2.333-2.4 2.333H6.4C5.08 25.333 4 24.283 4 23V9c0-1.283 1.08-2.333 2.4-2.333z"/>
       <path fill="none" stroke="#9da4bd" style="stroke:var(--color1, #9da4bd)" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.333" d="m26.667 9.333-10.667 8-10.667-8"/>
     </symbol>
-<symbol id="icon-close" viewBox="0 0 18 18"><path d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"/> </symbol>
-
+    <symbol id="icon-close" viewBox="0 0 18 18">
+    <path d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"/> </symbol>
+        <symbol
+      id="arrow-top"
+      viewBox="0 0 320 512"
+    >
+      <path
+        d="M310.6 182.6c-12.51 12.51-32.76 12.49-45.25 0L192 109.3V480c0 17.69-14.31 32-32 32s-32-14.31-32-32V109.3L54.63 182.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l128-128c12.5-12.5 32.75-12.5 45.25 0l128 128C323.1 149.9 323.1 170.1 310.6 182.6z"
+      />
+    </symbol>
   </defs>
 </svg>
