@@ -591,11 +591,11 @@ body {
 }
 
 .price-item.left {
-  background: linear-gradient(to bottom, rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2));
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 
 .price-item.right {
-  background: linear-gradient(to bottom, rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2));
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-inner-list {
