@@ -245,8 +245,15 @@ body {
   position: fixed;
   top: 0;
   width: 99vw;
-  background-color: rgba(24, 27, 37, 0.4);
+  /* background-color: rgba(24, 27, 37, 0.4); */
   z-index: 10;
+}
+
+.no-transparency {
+  transition: background-color var(--transition-duration) var(--transition-timing-function), 
+  backdrop-filter var(--transition-duration) var(--transition-timing-function);
+  background-color: rgba(16 18 27 / 40%);
+  backdrop-filter: blur(10px);
 }
 
 .header>.container {

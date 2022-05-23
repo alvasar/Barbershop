@@ -9,14 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- custom styles -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Barbershop</title>
   </head>
-  <body>
+  <body id="body">
     
     <!-- header -->
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <!-- header-sidebar -->
       <a class="link" href="index.html" aria-label="Логотип сайта Barbershop">
@@ -29,7 +31,7 @@
         <ul class="list">
           <li class="item"><a class="link navigation-link current" href="#about">О нас</a></li>
           <li class="item"><a class="link navigation-link" href="#price">Услуги и цены</a></li>
-          <li class="item"><a class="link navigation-link" href="#staf">Мастера</a></li>
+          <li class="item"><a class="link navigation-link" href="#team">Мастера</a></li>
           <li class="item"><a class="link navigation-link" href="#contact">Контакты</a></li>
         </ul>
       </nav>
@@ -110,7 +112,7 @@
             />
           </li>
         </ul>
-        <div class="about-group">
+        <div class="about-group" data-aos="fade-left">
           <p class="uppertitle">О нас</p>
           <h2 class="title">Лучший Барбершоп твоего города</h2>
           <p class="subtitle">
@@ -189,12 +191,13 @@
       </section>
 
       <!-- members -->
-      <section class="section members" id="staf">
+      <section class="section members" id="team">
         <div class="container">
         <p class="uppertitle">для настоящих ценителей атмосферы</p>
         <h2 class="title">Наши мастера</h2>
         <ul class="member-list list grid"> 
-          <li class="member-item grid-item"><img class="member-img" src="./images/team/member-1.jpg" alt="John Smith" width="370" height="346" />
+          <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="300">
+          <img class="member-img" src="./images/team/member-1.jpg" alt="John Smith" width="370" height="346" />
           <div class="member-group">
             <h3 class="member-title" lang="en">John Smith</h3>
             <p class="member-position" lang="en">Extreme Barber</p>
@@ -218,7 +221,8 @@
                 </li>
             </ul>
           </li>
-          <li class="member-item grid-item"><img class="member-img" src="./images/team/member-2.jpg" alt="Michele Doe" width="370" height="346" />
+          <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="600">
+            <img class="member-img" src="./images/team/member-2.jpg" alt="Michele Doe" width="370" height="346" />
           <div class="member-group">
             <h3 class="member-title">Michele Doe</h3>
              <p class="member-position" lang="en">Extreme Barber</p>
@@ -242,7 +246,8 @@
                 </li>
             </ul>
           </li>
-          <li class="member-item grid-item"><img class="member-img" src="./images/team/member-3.jpg" alt="Alan Black" width="370" height="346" />
+          <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="900">
+            <img class="member-img" src="./images/team/member-3.jpg" alt="Alan Black" width="370" height="346" />
 
           <!-- <li class="member-item grid-item"><img class="member-img" src="./images/team/member-3.jpg" alt="Alan Black" width="370" height="346"/> -->
           <div class="member-group"> 
@@ -367,7 +372,11 @@
         </li>
       </ul>
     </div>
-        <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/header-scroll.js"></script>
+    <!-- AOS aniamtion library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animations.js"></script>
 
   </body>
 </html>
