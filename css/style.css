@@ -316,7 +316,6 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  opacity: 1;
   transition:
     opacity var(--transition-duration) var(--transition-timing-function),
     transform var(--transition-duration) var(--transition-timing-function),
@@ -341,7 +340,20 @@ body {
   width: 500px;
   height: 400px;
 
+  transition: transform 300ms ease-in-out 200ms, opacity 300ms ease-in-out 200ms;
 }
+/* початковий стан елемента перед анімацією */
+.backdrop.is-hidden .modal-wrapper {
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+}
+
+/* кінцевий стан елемента після анімації */
+.backdrop .modal-wrapper {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
 
 .modal-btn {
   position: absolute;
