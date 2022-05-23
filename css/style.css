@@ -592,11 +592,11 @@ body {
   width: calc(100%/2);
 }
 
-.price-item .left {
+.price-item.left {
   background: linear-gradient(to bottom, rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2));
 }
 
-.price-item .right {
+.price-item.right {
   background: linear-gradient(to bottom, rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2));
 }
 
