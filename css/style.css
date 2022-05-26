@@ -385,7 +385,9 @@ body {
 .backdrop .modal-wrapper {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
+  padding: 5px;
 }
+
 
 
 .modal-btn {
@@ -416,6 +418,103 @@ body {
 
 /* Modalka-form */
 
+
+.form-title {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: currentColor;
+}
+
+
+.form-goup, 
+.form-title,
+.form-policy-group {
+  display: block;
+  margin-bottom:20px;
+}
+
+.form-modal-group {
+  position: relative;
+}
+
+.modal-foem-label {
+  color:#FF6C00;
+  font-size: 12px;
+}
+
+.modal-form-input {
+  width: 100%;
+  padding: 15px 15px 15px 36px;
+
+  border-radius: 5px;
+  border: 1;
+
+  outline: transparent;
+}
+
+
+.form-modal-icon{
+  position: absolute;
+  bottom: 9px;
+  left: 10px;
+  fill:#303030;
+}
+/* вибор стрижки радио */
+
+
+/* chekcbox-style */
+
+.form-policy-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.custom-chekbox {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  outline: 2px solid var(--accent-cl);
+  border-radius: 4px;
+  outline-offset: -2px;
+
+  transition: background-color 300ms ease-in;
+}
+
+.custom-chekbox-icon {
+  opacity: 0;
+  transition: ;
+}
+
+.checkbox:checked + .custom-chekbox {
+  background-color: yelow;
+}
+
+.checkbox:checked + .custom-chekbox .custom-chekbox-icon{opacity: 1;}
+
+
+
+  
+
+
+
+
+
+
+
+
+/* 
 .modal-form .title {
   margin-top: 0;
   margin-bottom: 12px;
@@ -500,7 +599,7 @@ body {
   outline: 0;
   border-color: var(--accent-cl);
 }
-
+ */
 .checkbox-field {
   position: relative;
 
@@ -1082,6 +1181,94 @@ body {
 
 /*Contact-form */
 
+contact left-side {
+
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+}
+
+.form-label {
+  color: #090b13 
+  fonts;
+}
+
+.form-wrapper {
+
+  display:flex;
+  align-items: center;
+}
+
+.form-wrapper .form-goup {
+position: relative;
+
+padding-top: 20px;
+
+}
+
+.form-wrapper .form-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-20px);
+
+  transition: transform 400ms earse;
+  }
+
+
+.form-input {
+width: 270px;
+background-color: transparent;
+padding: 5px;
+border: 0;
+color:#FFFFFF;
+border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+outline: transparent;
+
+transition: border-color ;
+}
+
+.form-input:focus, .form-intup:not(:placeholder-shown) {
+  border-bottom: 1px solid #F7F7F7;
+  
+}
+
+.form-input::placeholder {
+  opacity: 0;
+
+
+}
+
+.form-input:focus + .form-label, .form-intup:not(:placeholder-shown) {
+  transform: translateY(0);
+
+}
+
+.form-wrapper .form-group:not(:last-child) {
+margin-right: 30px;
+}
+
+.form-messge {
+width: 100%;
+resize: none;
+border:0;
+
+border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+outline: transparent;
+
+}
+
+.contact-form>.form-goup {
+  width:100%;
+
+}
+
+
+
 .contact-form .field {
   display: flex;
   flex-direction: column;
@@ -1089,7 +1276,7 @@ body {
 
   position: relative;
 }
-
+/* 
 .contact-form .label {
   text-align: left;
   font-weight: 400;
@@ -1208,7 +1395,7 @@ body {
 
 .contact-form .checkbox-field .link {
   color: var(--accent-cl);
-}
+} */
 
 .contact-form .btn {
   display: block;

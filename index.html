@@ -48,18 +48,18 @@
                   <use href="./images/icons.svg#icon-close"></use>
                 </svg></button>
     <form class="modal-form" autocomplete="off">
- <p class="title">Оставьте свои данные, мы вам перезвоним</p>
-
-                <label class="field">
-                  <span class="label">Имя</span>
+ <p class="form-title">Оставьте заявку на стрижку</p>
+<!-- Данные пользователя -->
+                <label class="form-modal-group">
+                  <span class="form-modal-label">Имя</span>
                   <input
-                    class="input"
+                    class="form-modal-input"
                     type="text"
-                    name="name"
-                    placeholder=" "
+                    name="user-name"
+                    placeholder="Сергей"
                   />
                   <svg
-                    class="icon"
+                    class="form-modal-icon"
                     aria-label="имя клиента"
                     width="18"
                     height="18"
@@ -68,11 +68,11 @@
                   </svg>
                 </label>
 
-                <label class="field">
-                  <span class="label">Телефон</span>
-                  <input class="input" type="tel" name="tel" placeholder=" " />
+                <label class="form-modal-group">
+                  <span class="form-modal-label">Телефон</span>
+                  <input class="form-modal-input" type="tel" name="tel" placeholder=" " />
                   <svg
-                    class="icon"
+                    class="form-modal-icon"
                     aria-label="телефон клиента"
                     width="18"
                     height="18"
@@ -81,16 +81,16 @@
                   </svg>
                 </label>
 
-                <label class="field">
-                  <span class="label">Почта</span>
+                <label class="form-group">
+                  <span class="form-modal-label">Почта</span>
                   <input
-                    class="input"
+                    class="form-modal-input"
                     type="email"
                     name="email"
                     placeholder=" "
                   />
                   <svg
-                    class="icon"
+                    class="form-icon"
                     aria-label="почта клиента"
                     width="18"
                     height="18"
@@ -99,8 +99,8 @@
                   </svg>
                 </label>
 
-                <label class="field" for="coment">
-                  <span class="label">Комментарий</span>
+                <label class="form-group" for="coment">
+                  <span class="form-modal-label">Комментарий</span>
                   <textarea
                     class="comment"
                     name="coment"
@@ -111,7 +111,15 @@
                   ></textarea>
                 </label>
 
-                <label class="checkbox-field">
+<!-- Тип стрижки -->
+                <label class="form-modal-type">
+                  <span class="form-type-group">
+                    <input type="radio"></span>
+                </label>
+
+<!-- Чек-бокс -->
+
+                <label class="form-policy-group">
                   <input
                     class="checkbox visually-hidden"
                     type="checkbox"
@@ -123,14 +131,13 @@
                   </svg>
 
                   <span class="label"
-                    >Соглашаюсь с рассылкой и принимаю
-                    <a
+                    >Соглашаюсь с                     <a
                       class="link"
                       href="./index.html"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >Условия Договора</a
-                    ></span
+                      >Политикой</a
+                    > использования персональных данных</span
                   >
                 </label>
 
@@ -392,7 +399,64 @@
         <h2 class="title visually-hidden">Наши контакты</h2>
         <div class="contact-group left">
         <p class="title">Онлайн запись</p>
-        <form class="contact-form" action="get" autocomplete="off">
+
+
+        <form class="contact-form" name="contact-form" action="./js/method.js" method="post">
+          <label class="field">
+            <span class="form-input">Имя</span>
+            <input
+              class="input"
+              type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Сергій"
+            />
+            <svg
+              class="icon"
+              aria-label="имя клиента"
+              width="18"
+              height="18"
+            >
+              <use href="./images/icons.svg#icon-persone"></use>
+            </svg>
+          </label>
+
+          <label class="form-goup">
+            <input
+              class="form-input"
+              type="text"
+              id="user-phone"
+              name="user-phone"
+              placeholder="+38 099 123 45 67"
+            />
+            <svg
+              class="icon"
+              aria-label="имя клиента"
+              width="18"
+              height="18"
+            >
+              <use href="./images/icons.svg#icon-persone"></use>
+            </svg>
+            <span class="form-label">Телефон</span>
+
+          </label>
+
+          <label class="form-messge-group" for="coment">
+            <span class="label">Комментарий</span>
+            <textarea
+              class="form-messge"
+              name="user-message"
+              id="coment"
+              cols="5"
+              rows="5"
+              placeholder="Ваш коментарий"
+            ></textarea>
+          </label>
+
+        </form>
+
+      <!-- Contact form -->
+        <!-- <form class="contact-form" action="get" autocomplete="off">
                 <label class="field">
                   <span class="label">Имя</span>
                   <input
@@ -480,7 +544,7 @@
                 <button class="btn btn-mode-dark" type="submit">Отправить</button>
 
 
-        </form>
+        </form> -->
         </div>
         <div class="contact-group right">
         <p class="title">Контакты</p>
