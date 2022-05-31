@@ -1181,33 +1181,33 @@ body {
 
 /*Contact-form */
 
-contact left-side {
+.contact-group .left {
 
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-
   width: 300px;
 }
 
-.form-label {
-  color: #090b13 
-  fonts;
-}
-
 .form-wrapper {
-
   display:flex;
   align-items: center;
 }
 
 .form-wrapper .form-goup {
-position: relative;
+  position: relative;
+  padding-top: 20px;
+}
 
-padding-top: 20px;
+.form-wrapper .form-goup:not(:last-child) {
+  margin-right: 30px;
+}
 
+.form-label {
+  color: #090b13 
+  fonts;
 }
 
 .form-wrapper .form-label {
@@ -1233,8 +1233,7 @@ transition: border-color ;
 }
 
 .form-input:focus, .form-intup:not(:placeholder-shown) {
-  border-bottom: 1px solid #F7F7F7;
-  
+  border-bottom: 1px solid #F7F7F7; 
 }
 
 .form-input::placeholder {
@@ -1266,8 +1265,6 @@ outline: transparent;
   width:100%;
 
 }
-
-
 
 .contact-form .field {
   display: flex;
