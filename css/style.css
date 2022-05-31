@@ -315,7 +315,7 @@ body {
 
   width: 500px;
 
-  padding: 20px;
+  padding: 25px;
 
   transition: transform 300ms ease-in-out 200ms, opacity 300ms ease-in-out 200ms;
 }
@@ -331,8 +331,6 @@ body {
   opacity: 1;
   padding: 5px;
 }
-
-
 
 .modal-btn {
   position: absolute;
@@ -357,38 +355,36 @@ body {
 .modal-btn:hover,
 .modal-btn:focus {
   border: 1px solid var(--accent-cl);
-
 }
-
-/* modal-form */
 
 .modal-title {
   display: block;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 
   font-weight: 400;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 20px;
+  line-height: 1.67;
   text-align: center;
+  text-transform: uppercase;
   letter-spacing: 0.03em;
   color: currentColor;
 }
-
-
-.modal-form__group, 
-.modal-form__policy-group {
-  display: block;
-  margin-bottom:20px;
+/* modal-form */
+.modal-form {
+  padding: 25px;
 }
 
 .modal-form__group {
   position: relative;
+
+  display: block;
+  margin-bottom: 20px;
 }
 
 .modal-form__label {
-  color:#FF6C00;
-  font-size: 12px;
+  display: block;
+  font-size: 14px;
 }
 
 .modal-form__input {
@@ -396,53 +392,97 @@ body {
   padding: 15px 15px 15px 36px;
 
   border-radius: 5px;
-  border: 1;
+  border: 1px solid var(--accent-cl);
 
   outline: transparent;
 }
 
-
-.modal-form__icon{
+.modal-form__icon {
   position: absolute;
-  bottom: 9px;
+
+  bottom: 15px;
   left: 10px;
-  fill:#303030;
+  fill: var(--btn-dark-cl);
 }
-/* вибор стрижки радио */
+
+.modal-form__label--warning {
+  position: absolute;
+  opacity: 0;
+}
+
+.modal-form__label--error {
+  position: absolute;
+  opacity: 0;
+}
+
+/* payment checkbox (радио кнопки) */
+.modal-form__pay-type {
+  display: flex;
+  align-items: center;
+  
+}
+
+.modal-form__pay-group:not(:last-child) {
+  margin-right: 20px;
+}
+
+.modal-form__pay-option {
+  fill: var(--accent-cl);
+  filter: grayscale(1);
+
+  transition: filter var(--transition-duration) var(--transition-timing-function);
+
+}
+.modal-form__checkbox:checked+.modal-form__pay-option {
+  filter: grayscale(0);
+}
 
 
-/* chekcbox-style */
+/* chekbox-style */
 
 .modal-form__policy-group {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
-.custom-chekbox {
+.modal-form__custom-checkbox {
   width: 20px;
   height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  margin-right: 10px;
 
   outline: 2px solid var(--accent-cl);
   border-radius: 4px;
   outline-offset: -2px;
-
-  transition: background-color 300ms ease-in;
 }
 
-.custom-chekbox-icon {
+.modal-form__custom-checkbox-icon {
   opacity: 0;
-  transition: ;
+  fill: var(--main-bg-cl);
+  transition: 
+  opacity var(--transition-duration) var(--transition-timing-function),
+  background-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.checkbox:checked + .custom-chekbox {
-  background-color: yelow;
+.modal-form__checkbox:checked+.modal-form__custom-checkbox {
+  background-color: var(--accent-cl);
 }
 
-.checkbox:checked + .custom-chekbox .custom-chekbox-icon{opacity: 1;}
+.modal-form__checkbox:checked+.modal-form__custom-checkbox .modal-form__custom-checkbox-icon {
+  opacity: 1;
+}
+.modal-form__link {
+  color: var(--accent-cl);
+}
+
+.modal-form__policy-description {
+  font-size: 14px;
+}
 
 /* 
 .modal-form .title {
@@ -644,16 +684,16 @@ body {
   flex-basis: 100px;
 }
 
-.hero .list {
+.hero__list {
   display: flex;
 }
 
 
-.hero .item:not(:last-child) {
+.hero__item:not(:last-child) {
   margin-right: 40px;
 }
 
-.hero .link {
+.hero__link {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -663,12 +703,24 @@ body {
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
-.hero .link:hover,
-.hero .link:focus {
+.hero__link:hover,
+.hero__link:focus {
   color: var(--accent-cl);
 }
 
-.hero .uppertitle,
+.hero__group {
+  padding-top: 272px;
+  width: 475px;
+}
+.uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--uppertitle);
+}
+
 .services .uppertitle {
   margin-bottom: 20px;
 
@@ -680,7 +732,7 @@ body {
   color: var(--uppertitle);
 }
 
-.hero .uppertitle {
+.hero__uppertitle {
   animation: fade-left-to-right 0.6s var(--transition-timing-function);
 }
 
@@ -688,10 +740,6 @@ body {
   color: var(--uppertitle);
 }
 
-.hero__group {
-  padding-top: 272px;
-  width: 475px;
-}
 
 .hero .title {
   margin-bottom: 20px;
