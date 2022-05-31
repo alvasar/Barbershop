@@ -36,121 +36,123 @@
       </nav>
       <div class="header__group">
         <a class="link header__phone" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="btn btn-mode-dark header-btn" data-modal-open type="button">Онлайн запись</button>
+        <button class="btn btn btn--mode-dark header__btn" data-modal-open type="button">Онлайн запись</button>
      </div>
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal-wrapper">
-    <button class="modal-btn" data-modal-close><svg
-                  aria-label="Закрыть окно"
-                  width="18"
-                  height="18"
-                >
-                  <use href="./images/icons.svg#icon-close"></use>
-                </svg></button>
-    <form class="modal-form" autocomplete="off">
- <strong class="form-title">Оставьте заявку на стрижку</strong>
-<!-- Данные пользователя -->
-                <label class="form-modal-group">
-                  <span class="form-modal-label">Имя</span>
-                  <input
-                    class="form-modal-input"
-                    type="text"
-                    name="user-name"
-                    placeholder="Сергей"
-                  />
-                  <span class="warning"></span>
-                  <span class="error"></span>
-                  <svg
-                    class="form-modal-icon"
-                    aria-label="имя клиента"
-                    width="18"
-                    height="18"
-                  >
-                    <use href="./images/icons.svg#icon-persone"></use>
-                  </svg>
-                </label>
+     <div class="backdrop is-hidden" data-modal>
+      <div class="modal-wrapper">
+        <button class="modal-btn" data-modal-close><svg
+                      aria-label="Закрыть окно"
+                      width="18"
+                      height="18"
+                    >
+                      <use href="./images/icons.svg#icon-close"></use>
+                    </svg></button>
+        <strong class="modal-title">Оставьте заявку</strong>
 
-                <label class="form-modal-group">
-                  <span class="form-modal-label">Телефон</span>
-                  <input class="form-modal-input" type="phone" name="user-phone" placeholder=" " />
-                  <span class="warning"></span>
-                  <span class="error"></span>
-                  <svg
-                    class="form-modal-icon"
-                    aria-label="телефон клиента"
-                    width="18"
-                    height="18"
-                  >
-                    <use href="./images/icons.svg#icon-phone-form"></use>
-                  </svg>
-                </label>
+        <form class="modal-form" autocomplete="off">
+    <!-- Данные пользователя -->
+                    <label class="modal-form__group">
+                      <span class="modal-form__label">Имя</span>
+                      <input
+                        class="modal-form-input"
+                        type="text"
+                        name="user-name"
+                        placeholder="Сергей"
+                      />
+                      <span class="warning"></span>
+                      <span class="error"></span>
+                      <svg
+                        class="modal-form-icon"
+                        aria-label="имя клиента"
+                        width="18"
+                        height="18"
+                      >
+                        <use href="./images/icons.svg#icon-persone"></use>
+                      </svg>
+                    </label>
+    
+                    <label class="modal-form__group">
+                      <span class="form-modal-label">Телефон</span>
+                      <input class="form-modal-input" type="phone" name="user-phone" placeholder=" " />
+                      <span class="warning"></span>
+                      <span class="error"></span>
+                      <svg
+                        class="form-modal-icon"
+                        aria-label="телефон клиента"
+                        width="18"
+                        height="18"
+                      >
+                        <use href="./images/icons.svg#icon-phone-form"></use>
+                      </svg>
+                    </label>
+    
+                    <label class="modal-form__group">
+                      <span class="form-modal-label">Почта</span>
+                      <input
+                        class="form-modal-input"
+                        type="mail"
+                        name="user-mail"
+                        placeholder=" "
+                      />
+                      <span class="warning"></span>
+                      <span class="error"></span>
+                      <svg
+                        class="form-icon"
+                        aria-label="почта клиента"
+                        width="18"
+                        height="18"
+                      >
+                        <use href="./images/icons.svg#icon-email-form"></use>
+                      </svg>
+                    </label>
+    
+                    <label class="modal-form__group" for="coment">
+                      <span class="form-modal-label">Комментарий</span>
+                      <textarea
+                        class="comment"
+                        name="coment"
+                        id="coment"
+                        cols="5"
+                        rows="4"
+                        placeholder="Введите текст"
+                      ></textarea>
+                    </label>
+    
+    <!-- Тип стрижки -->
+                    <label class="modal-form-type">
+                      <span class="form-type-group">
+                        <input type="radio"></span>
+                    </label>
+    
+    <!-- Чек-бокс -->
+    
+                    <label class="modal-form__policy-group">
+                      <input
+                        class="checkbox visually-hidden"
+                        type="checkbox"
+                        name="policy"
+                        value="policy"
+                      />
+                      <svg class="icon" aria-label="check" width="16" height="15">
+                        <use href="./images/icons.svg#icon-check"></use>
+                      </svg>
+    
+                      <span class="label"
+                        >Соглашаюсь с                     <a
+                          class="link"
+                          href="./index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Политикой</a
+                        > использования персональных данных</span
+                      >
+                    </label>
+    
+                    <button class="btn btn--mode-light" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
 
-                <label class="form-group">
-                  <span class="form-modal-label">Почта</span>
-                  <input
-                    class="form-modal-input"
-                    type="mail"
-                    name="user-mail"
-                    placeholder=" "
-                  />
-                  <span class="warning"></span>
-                  <span class="error"></span>
-                  <svg
-                    class="form-icon"
-                    aria-label="почта клиента"
-                    width="18"
-                    height="18"
-                  >
-                    <use href="./images/icons.svg#icon-email-form"></use>
-                  </svg>
-                </label>
-
-                <label class="form-group" for="coment">
-                  <span class="form-modal-label">Комментарий</span>
-                  <textarea
-                    class="comment"
-                    name="coment"
-                    id="coment"
-                    cols="5"
-                    rows="4"
-                    placeholder="Введите текст"
-                  ></textarea>
-                </label>
-
-<!-- Тип стрижки -->
-                <label class="form-modal-type">
-                  <span class="form-type-group">
-                    <input type="radio"></span>
-                </label>
-
-<!-- Чек-бокс -->
-
-                <label class="form-policy-group">
-                  <input
-                    class="checkbox visually-hidden"
-                    type="checkbox"
-                    name="policy"
-                    value="policy"
-                  />
-                  <svg class="icon" aria-label="check" width="16" height="15">
-                    <use href="./images/icons.svg#icon-check"></use>
-                  </svg>
-
-                  <span class="label"
-                    >Соглашаюсь с                     <a
-                      class="link"
-                      href="./index.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Политикой</a
-                    > использования персональных данных</span
-                  >
-                </label>
-
-                <button class="btn" type="submit">Отправить</button>
-    </form>
-  </div>
-</div>
 
       </div>
     </header>
@@ -160,9 +162,9 @@
       <section class="hero" id="hero">
         <div class="container">
           <div class="hero__left-side">
-        <ul class="socials-list list">
-        <li class="item">
-          <a class="link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <ul class="hero__list socials-list list">
+        <li class="hero__item">
+          <a class="her__link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
         </li>
         <li>
           <a class="link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
@@ -179,24 +181,24 @@
       </div>
 <div class="slider">
   <ul class="slider__pagination list">
-    <li class="slider__item active"><a href=""></a></li>
+    <li class="slider__item slider__item--active"><a href=""></a></li>
     <li class="slider__item"><a href=""></a></li>
     <li class="slider__item"><a href=""></a></li>
   </ul>
 </div>
         <ul class="slider__controls list">
-          <li class="item"> <button class="slider-btn slider-btn-disable" type="button">Назад</button></li>
-          <li class="item"> <button class="slider-btn" type="button">Вперед</button></li>
+          <li class="slider__item-contols"> <button class="slider__btn slider__btn--disable" type="button">Назад</button></li>
+          <li class="slider__item-contols"> <button class="slider__btn" type="button">Вперед</button></li>
         </ul>
         </div>
       </section>
 
       <!-- section about -->
       <section class="section about" id="about">
-        <div class="container">
+        <div class="container about__container">
         <ul class="about-list list">
           <li class="about-list__item">
-            <img class="about-;ist__img"
+            <img class="about-list__img"
               src="./images/about/img-1.jpg"
               alt="Стрижка бороды"
               width="270"
@@ -204,7 +206,7 @@
             />
           </li>
           <li class="about-list__item">
-            <img class="about-img"
+            <img class="about-list__img"
               src="./images/about/img-2.jpg"
               alt="Стрижка головы"
               width="270"
@@ -212,21 +214,21 @@
             />
           </li>
         </ul>
-        <div class="about-group" data-aos="fade-left">
-          <p class="uppertitle">О нас</p>
-          <h2 class="title">Лучший Барбершоп твоего города</h2>
-          <p class="subtitle">
+        <div class="about__group" data-aos="fade-left">
+          <p class="about__uppertitle">О нас</p>
+          <h2 class="about__title">Лучший Барбершоп твоего города</h2>
+          <p class="about__subtitle subtitle">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </p>
-          <p class="description">
+          <p class="about__description">
               Мы команда, которая никогда не останавливается на достигнутом и
               жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
               никогда не сможешь быть прежним. Мы команда, которая всегда с
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-        <button class="btn .btn-mode-light" type="button">Онлайн запись</button>
+        <button class="btn btn--mode-light" type="button">Онлайн запись</button>
         </div>
       </section>
 
@@ -253,7 +255,7 @@
             </ul>
           </li>
         </ul>
-        <button class="btn btn-mode-dark" type="button">Онлайн запись</button>
+        <button class="btn btn--mode-dark" type="button">Онлайн запись</button>
         </div>
       </section>
 
@@ -462,7 +464,7 @@
             <span class="form-label">сообщение</span>
 
           </label>
-          <button class="btn btn-mode-dark" type="submit">Отправить</button>
+          <button class="btn btn--mode-dark" type="submit">Отправить</button>
 
         </form>
 

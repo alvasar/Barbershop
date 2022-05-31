@@ -119,6 +119,13 @@ body {
   padding: 0;
 }
 
+.js-no-transparency {
+  transition: background-color var(--transition-duration) var(--transition-timing-function), 
+  backdrop-filter var(--transition-duration) var(--transition-timing-function);
+  background-color: rgba(16 18 27 / 40%);
+  backdrop-filter: blur(10px);
+}
+
 /* 
 Сітка для колекції з елементів
 */
@@ -166,11 +173,11 @@ body {
   background-color: var(--accent-cl);
 }
 
-.btn-mode-light {
+.btn--mode-light {
   color: var(--btn-dark-cl);
 }
 
-.btn-mode-dark {
+.btn--mode-dark {
   color: var(--secondary-txt-cl);
 }
 
@@ -182,13 +189,6 @@ body {
   width: 99vw;
   /* background-color: rgba(24, 27, 37, 0.4); */
   z-index: 10;
-}
-
-.no-transparency {
-  transition: background-color var(--transition-duration) var(--transition-timing-function), 
-  backdrop-filter var(--transition-duration) var(--transition-timing-function);
-  background-color: rgba(16 18 27 / 40%);
-  backdrop-filter: blur(10px);
 }
 
 .header__container {
@@ -257,7 +257,7 @@ body {
   color: var(--accent-cl);
 }
 
-.header-btn {
+.header__btn {
   animation: swing 6s ease-in-out infinite forwards;
 }
 @keyframes swing {
@@ -281,7 +281,7 @@ body {
     transform: rotate(0);
   }
 }
-
+/* modal form */
 .backdrop {
   position: fixed;
   top: 0;
@@ -362,7 +362,7 @@ body {
 
 /* modal-form */
 
-.form-title {
+.modal-title {
   display: block;
   margin-top: 0;
   margin-bottom: 12px;
@@ -376,23 +376,22 @@ body {
 }
 
 
-.form-group, 
-.form-title,
-.form-policy-group {
+.modal-form__group, 
+.modal-form__policy-group {
   display: block;
   margin-bottom:20px;
 }
 
-.form-modal-group {
+.modal-form__group {
   position: relative;
 }
 
-.modal-form-label {
+.modal-form__label {
   color:#FF6C00;
   font-size: 12px;
 }
 
-.modal-form-input {
+.modal-form__input {
   width: 100%;
   padding: 15px 15px 15px 36px;
 
@@ -403,7 +402,7 @@ body {
 }
 
 
-.form-modal-icon{
+.modal-form__icon{
   position: absolute;
   bottom: 9px;
   left: 10px;
@@ -414,12 +413,11 @@ body {
 
 /* chekcbox-style */
 
-.form-policy-group {
+.modal-form__policy-group {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .custom-chekbox {
   width: 20px;
@@ -445,17 +443,6 @@ body {
 }
 
 .checkbox:checked + .custom-chekbox .custom-chekbox-icon{opacity: 1;}
-
-
-
-  
-
-
-
-
-
-
-
 
 /* 
 .modal-form .title {
@@ -793,7 +780,7 @@ body {
   margin-right: 10px;
 }
 
-.active {
+.slider__item--active {
   width: 100%;
   background-color: var(--main-bg-cl);
 }
@@ -808,7 +795,7 @@ body {
   align-items: center;
 }
 
-.slider-btn {
+.slider__btn {
   width: 60px;
   height: 24px;
 
@@ -825,7 +812,7 @@ body {
   border-bottom: 1px solid var(--main-bg-cl);
 }
 
-.slider-btn-disable {
+.slider__btn--disable {
   text-align: left;
   color: var(--uppertitle);
   border-bottom: 1px solid var(--uppertitle);
@@ -834,17 +821,13 @@ body {
   top: 0px;
 }
 
-
-
-
-
 /*#endregion*/
 /*#region about*/
 .about {
   background-color: var(--main-bg-cl);
 }
 
-.about>.container {
+.about__container {
   display: flex;
 }
 
@@ -866,15 +849,15 @@ body {
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
-.about .item:hover .about-img {
+.about-list__item:hover .about-list__img {
   transform: scale(1.15)
 }
 
-.about .about-group {
+.about__group {
   width: 500px;
 }
 
-.uppertitle {
+.about__uppertitle {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -887,7 +870,7 @@ body {
   color: var(--btn-dark-cl);
 }
 
-.uppertitle::before {
+.about__uppertitle::before {
   display: block;
   width: 60px;
   content: '';
@@ -896,7 +879,7 @@ body {
   margin-right: 20px;
 }
 
-.title {
+.about__title {
   margin-bottom: 20px;
 
   font-family: var(--seondary-font);
@@ -907,7 +890,28 @@ body {
   color: var(--btn-dark-cl);
 }
 
-.about .subtitle,
+.subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
+}
+
+.about__subtitle {
+  margin-bottom: 20px;
+}
+
+.about__description {
+  margin-bottom: 40px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
+}
+
 .benefits .subtitle {
   margin-bottom: 20px;
 
@@ -918,15 +922,6 @@ body {
   color: var(--main-txt-cl);
 }
 
-.about .description {
-  margin-bottom: 40px;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.86;
-  letter-spacing: 0.02em;
-  color: var(--main-txt-cl);
-}
 
 /*#endregion*/
 /*#region services*/
