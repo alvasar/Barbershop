@@ -18,7 +18,7 @@
   <body id="body">
     <!-- header -->
     <header class="header" id="header">
-      <div class="container header-container">
+      <div class="container header__container">
         <!-- header-sidebar -->
       <a class="logo" href="index.html" aria-label="Логотип сайта Barbershop">
         <svg class="logo__svg" width="69" height="55">
@@ -159,7 +159,7 @@
       <!-- hero  -->
       <section class="hero" id="hero">
         <div class="container">
-          <div class="hero-left-side">
+          <div class="hero__left-side">
         <ul class="socials-list list">
         <li class="item">
           <a class="link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -169,7 +169,7 @@
         </li class="item">
       </ul>
       </div>
-      <div class="hero-group">
+      <div class="hero__group">
         <p class="uppertitle" lang="en">A hair salon for men in Kyiv</p>
         <h1 class="title" lang="en">BarberShop</h1>
         <p class="subtitle" lang="en">
@@ -177,12 +177,14 @@
           We work quickly, carefully, and tastefully.
         </p>
       </div>
-      <ul class="slider-pagination list">
-        <li class="slider-item active"><a href=""></a></li>
-        <li class="slider-item"><a href=""></a></li>
-        <li class="slider-item"><a href=""></a></li>
-      </ul>
-        <ul class="slider-controls list">
+<div class="slider">
+  <ul class="slider__pagination list">
+    <li class="slider__item active"><a href=""></a></li>
+    <li class="slider__item"><a href=""></a></li>
+    <li class="slider__item"><a href=""></a></li>
+  </ul>
+</div>
+        <ul class="slider__controls list">
           <li class="item"> <button class="slider-btn slider-btn-disable" type="button">Назад</button></li>
           <li class="item"> <button class="slider-btn" type="button">Вперед</button></li>
         </ul>
@@ -192,16 +194,16 @@
       <!-- section about -->
       <section class="section about" id="about">
         <div class="container">
-        <ul class="list">
-          <li class="item">
-            <img class="about-img"
+        <ul class="about-list list">
+          <li class="about-list__item">
+            <img class="about-;ist__img"
               src="./images/about/img-1.jpg"
               alt="Стрижка бороды"
               width="270"
               height="445"
             />
           </li>
-          <li class="item">
+          <li class="about-list__item">
             <img class="about-img"
               src="./images/about/img-2.jpg"
               alt="Стрижка головы"
