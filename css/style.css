@@ -1365,6 +1365,7 @@ img {
 
 .icons-list__icon {
   margin-right: 16px;
+  fill: transparent;
 }
 
 .contact__time-title {
