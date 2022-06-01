@@ -1111,7 +1111,6 @@ img {
   margin-right: 10px;
 }
 
-
 /* Social icons */
 .socials {
   display: flex;
@@ -1156,17 +1155,17 @@ img {
   background-color: var(--main-bg-cl);
 }
 
-.gallery .uppertitle {
+.gallery__uppertitle {
   margin-bottom: 44px;
 }
 
-.gallery .item {
+.gallery-list__item {
   position: relative;
 
   --items: 4;
 }
 
-.gallery .item::before {
+.gallery-list__item::before {
   position: absolute;
   left: 0;
   top: 0;
