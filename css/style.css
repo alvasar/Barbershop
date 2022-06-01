@@ -1064,25 +1064,33 @@ img {
 }
 
 /* member-card */
-.members .member-item {
+.member__item {
   --items: 3;
 }
 
-.members .member-img {
+.member__img {
   margin-bottom: 30px;
 }
 
-.members .member-title {
-  margin-bottom: 8px;
-
+.member__title {
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
   text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--btn-dark-cl);
 
-  color: #303030;
+  margin-bottom: 8px;
 }
 
-.members .member-position {
+.member__position {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-cl);
+
   margin-bottom: 30px;
 
   font-size: 14px;
@@ -1092,33 +1100,15 @@ img {
   color: #ff6c00;
 }
 
-.members .social-list {
+.socials-list {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.members .social-item:not(:last-child) {
+.socials__item:not(:last-child) {
   margin-right: 10px;
-}
-
-.members .member-title {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.39;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--btn-dark-cl);
-}
-
-.members .member-position {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--accent-cl);
 }
 
 
@@ -1129,11 +1119,11 @@ img {
   align-items: center;
 }
 
-.socials-item:not(:last-child) {
+.socials__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.socials-link {
+.socials__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1151,42 +1141,12 @@ img {
   color var(--transition-duration) var(--transition-timing-function);
 }
 
-.socials-link:hover,
-.socials-link:focus {
+.socials__link:hover,
+.socials__link:focus {
   color: #ff6c00;
 }
 
-.socials-icon {
-  fill: currentColor;
-}
-
-/* .socials-icon {
-  fill: #303030;
-}
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
-  fill: #ff6c00;
-} */
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  color: var(--btn-dark-cl);
-  background-color: var(--main-bg-cl);
-  border-radius: 50%;
-
-  transition: fill var(--transition-duration) var(--transition-timing-function);
-}
-
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: var(--accent-cl);
-}
-
-.social-icon {
+.socials__icon {
   fill: currentColor;
 }
 
