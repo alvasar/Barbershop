@@ -1191,57 +1191,54 @@ img {
   display: flex;
 }
 
-.contacts .contact-group {
+.contact {
   width: calc(100%/2);
 }
 
-.contact-group .left {
+.contact--left-side {
   background-color: var(--dark-bg-cl);
-}
-
-/*Contact-form */
-
-.contact-group .left {
   width: 560px;
 }
 
-.contacts__section-title {
+.contact__section-title {
   margin-bottom: 60px;
 }
+
+/*Contact-form */
 
 .contact-form {
   display: flex;
   flex-direction: column;
 }
 
-.form-wrapper {
+.contact-form__wrapper {
   display:flex;
   align-items: center;
   margin-bottom: 44px;
 }
 
-.form-wrapper>.form-group {
+.contact-form__group {
   position: relative;
   padding-top: 20px;
 }
 
-.form-wrapper>.form-group:not(:last-child) {
+.contact-form__group:not(:last-child) {
   margin-right: 30px;
 }
 
-.form-label {
+.contact-form__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.4) ;
-}
 
-.form-wrapper .form-label {
-  position: absolute;
-  left: 0;
-  top: 0;
   transform: translateY(-20px);
 
   transition: 
@@ -1249,14 +1246,15 @@ img {
   color var(--transition-duration) var(--transition-timing-function);
 }
 
-.form-input:focus+.form-label, 
-.form-intup:not(:placeholder-shown) {
+
+.contact-form__input:focus+.contact-form__label, 
+.contact-form__input:not(:placeholder-shown) {
   transform: translateY(0);
   color: var(--main-bg-cl);
 } 
 
 
-.form-input {
+.contact-form__input {
   width: 270px;
 
   color:#FFFFFF;
@@ -1271,34 +1269,33 @@ img {
   transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.form-input:focus, .form-intup:not(:placeholder-shown) {
+.contact-form__input:focus, .contact-form__input:not(:placeholder-shown) {
   border-bottom: 1px solid #F7F7F7; 
 }
 
-.form-input::placeholder {
+.contact-form__input::placeholder {
   opacity: 0;
 }
 
-.form-icon {
+.contact-form__icon {
   position: absolute;
   top: 50%;
   left: 0;
   fill:rgba(157, 164, 189, 0.4);
 }
 
-.form-input:focus ~.form-icon, 
-.form-intup:not(:placeholder-shown) {
+.contact-form__input:focus ~.contact-form__icon, 
+.contact-form__input:not(:placeholder-shown) {
   fill: var(--main-bg-cl);
 } 
 
-
-.form-group-message {
+.contact-form__message {
   position: relative;
   width: 100%;
   margin-bottom: 44px;
 }
 
-.form-group-message .form-label {
+.contact-form__label {
   position: absolute;
   left: 0;
   top: -20px;
@@ -1307,12 +1304,12 @@ img {
   color var(--transition-duration) var(--transition-timing-function);
 }
 
-.form-message:focus+.form-label, 
-.form-message:not(:placeholder-shown) {
+.contact-form__message-input:focus+.contact-form__label, 
+.contact-form__message-input:not(:placeholder-shown) {
   color: var(--main-bg-cl);
 } 
 
-.form-message {
+.contact-form__message-input {
   padding: 5px;
   background-color: transparent;
   border:0;
@@ -1326,148 +1323,16 @@ img {
   transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.form-message:focus, .form-message:not(:placeholder-shown) {
+.contact-form__message-input:focus, .contact-form__message-input:not(:placeholder-shown) {
   border-bottom: 1px solid #F7F7F7; 
 }
 
 
-.form-message::placeholder {
+.contact-form__message-input::placeholder {
   opacity: 0;
 }
 
-
-
-
-
-/* .contact-form .field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  position: relative;
-} */
-/* 
-.contact-form .label {
-  text-align: left;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--secondary-txt-cl);
-  margin-bottom: 4px;
-}
-
-.contact-form .input {
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  padding-left: 30px;
-  font: inherit;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
-  transition: border-color var(--transition-duration) var(--transition-timing-function);
-}
-
-.contact-form .input:focus,
-.contact-form .input:active {
-  outline: 0;
-  border-color: var(--accent-cl);
-}
-
-.contact-form .icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  fill: currentColor;
-
-  transition: fill var(--transition-duration) var(--transition-timing-function);
-}
-
-.contact-form .field:focus-within .icon {
-  fill: var(--accent-cl);
-}
-
-.contact-form .comment {
-  resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding: 16px 12px;
-
-  transition: border-color var(--transition-duration) var(--transition-timing-function);
-}
-
-.contact-form .comment::placeholder {
-  font-weight: 200;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--btn-dark-cl);
-}
-
-.contact-form .comment:focus,
-.contact-form .comment:active {
-  outline: 0;
-  border-color: var(--accent-cl);
-}
-
-.contact-form .checkbox-field {
-  position: relative;
-
-  display: block;
-  margin-bottom: 30px;
-}
-
-.contact-form .checkbox-field .icon {
-  position: absolute;
-  top: 4px;
-  left: 0;
-
-  width: 15px;
-  height: 15px;
-  border-radius: 2px;
-  margin-right: 10px;
-  cursor: pointer;
-  fill: var(--dark-bg-cl);
-
-  border: 2px solid var(--btn-dark-cl);
-}
-
-.contact-form .checkbox:focus+.icon {
-  border-color: var(--accent-cl);
-  fill: var(--dark-bg-cl);
-}
-
-.contact-form .checkbox:hover+.icon {
-  border-color: var(--accent-cl);
-  fill: var(--dark-bg-cl);
-}
-
-.contact-form .checkbox:checked+.icon {
-  border-color: transparent;
-  background-color: var(--accent-cl);
-  background-image: url('../images/icons.svg#icon-check');
-  background-position: center;
-  background-size: contain;
-  background-origin: border-box;
-  fill: var(--main-bg-cl);
-}
-
-.contact-form .checkbox-field .label {
-  display: inline-block;
-  margin-left: 20px;
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: var(--main-bg-cl);
-}
-
-.contact-form .checkbox-field .link {
-  color: var(--accent-cl);
-} */
-
-.contact-form .btn {
+.contact-form__bnt {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1475,7 +1340,7 @@ img {
   min-width: 200px;
   transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
-
+/* остановился тут */
 .contact-group.right {
   margin-left: 100px;
 }

@@ -487,23 +487,22 @@
       <!-- contacts -->
       <section class="section contacts" id="contact">
         <div class="container contacts__container">
-       <div class="contact-group left">
-        <h2 class="section-title section-title--mode-dark contacts__section-title">Онлайн запись</h2>
-
+       <div class="contact contact--left-side">
+        <h2 class="section-title section-title--mode-dark contact__section-title">Онлайн запись</h2>
 
         <form class="contact-form" name="contact-form" action="./js/method.js" method="post">
-          <div class="form-wrapper">
-          <label class="form-group">
+          <div class="contact-form__wrapper">
+          <label class="contact-form__group">
             <input
-              class="form-input"
+              class="contact-form__input"
               type="text"
               id="user-name"
               name="user-name"
               placeholder="Сергій"
             />
-            <span class="form-label">Имя*</span>
+            <span class="contact-form__label">Имя*</span>
             <svg
-              class="form-icon"
+              class="contact-form__icon"
               aria-label="имя клиента"
               width="18"
               height="18"
@@ -512,17 +511,17 @@
             </svg>
           </label>
 
-          <label class="form-group">
+          <label class="contact-form__group">
             <input
-              class="form-input"
+              class="contact-form__input"
               type="text"
               id="user-phone"
               name="user-phone"
               placeholder="+38 099 123 45 67"
             />
-            <span class="form-label">Телефон*</span>
+            <span class="contact-form__label">Телефон*</span>
             <svg
-              class="form-icon"
+              class="contact-form__icon"
               aria-label="номер телефоа"
               width="18"
               height="18"
@@ -532,23 +531,24 @@
           </label>
         </div>
 
-          <label class="form-group-message" for="coment">
+          <label class="contact-form__message" for="coment">
             <textarea
-              class="form-message"
+              class="contact-form__message-input"
               name="user-message"
               id="coment"
               cols="5"
               rows="5"
               placeholder="Ваш коментарий..."
             ></textarea>
-            <span class="form-label">сообщение</span>
+            <span class="contact-form__label">сообщение</span>
 
           </label>
-          <button class="btn btn--mode-dark" type="submit">Отправить</button>
+
+          <button class="btn btn--mode-dark contact-form__bnt" type="submit">Отправить</button>
 
         </form>
         </div>
-        <div class="contact-group right">
+        <div class="contact contact--right-side">
         <p class="title">Контакты</p>
         <address>
           <ul class="list">
