@@ -1341,11 +1341,11 @@ img {
   transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 /* остановился тут */
-.contact-group.right {
+.contact--right-side {
   margin-left: 100px;
 }
 
-.contacts .list {
+.icons-list {
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -1354,22 +1354,20 @@ img {
   color: var(--services-txt-cl)
 }
 
-.contacts .item:not(:last-child) {
+.icons-list__item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.contacts .item:nth-last-child(1) {
+.icons-list__item:nth-last-child(1) {
   margin-bottom: 70px;
   text-decoration: underline;
 }
 
-.icon-map-pin,
-.icon-phone,
-.icon-mail {
+.icons-list__icon {
   margin-right: 16px;
 }
 
-.contacts .time-title {
+.contact__time-title {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -1378,7 +1376,7 @@ img {
   color: var(--secondary-txt-cl);
 }
 
-.contacts .time {
+.contact__time {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
