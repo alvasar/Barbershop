@@ -57,10 +57,34 @@
                 class="modal-form__input"
                 type="text"
                 name="user-name"
-                placeholder="Сергей"
+                placeholder=" "
+                minlength="3"
                       />
-        <span class="modal-form__label--warning"></span>
-        <span class="modal-form__label--error"></span>
+        
+        <span class="alert alert--warning">
+          Имя должно состоять минимум из 3 символов
+          <svg
+          class="alert-icon alert-icon--warning"
+          aria-label="предупреждение"
+          width="15"
+          height="15"
+                    >
+      <use href="./images/icons.svg#icon-warning"></use>
+        </svg>
+        </span>
+
+        <span class="alert alert--error">
+          Вы ввели некоректные данные
+          <svg
+          class="alert-icon alert-icon--error"
+          aria-label="ошибка"
+          width="15"
+          height="15"
+                    >
+      <use href="./images/icons.svg#icon-error"></use>
+      </svg>
+
+        </span>
         <svg
             class="modal-form__icon"
             aria-label="имя клиента"
@@ -76,10 +100,33 @@
                  class="modal-form__input"
                  type="phone"
                  name="user-phone"
-                 placeholder="095 111 11 11"
+                 minlength="9"
+                 placeholder=" "
                        />
-         <span class="modal-form__label--warning"></span>
-         <span class="modal-form__label--error"></span>
+                       <span class="modal-form__label--warning">
+                        Номер телефона должен состоять минимум из 9 цифр
+                        <svg
+                        class="modal-form__label--warning-icon"
+                        aria-label="предупреждение"
+                        width="15"
+                        height="15"
+                                  >
+                    <use href="./images/icons.svg#icon-warning"></use>
+                    </svg>
+              
+                      </span>
+                      <span class="modal-form__label--error">
+                        Вы ввели некоректные данные
+                        <svg
+                        class="modal-form__label--error-icon"
+                        aria-label="ошибка"
+                        width="15"
+                        height="15"
+                                  >
+                    <use href="./images/icons.svg#icon-error"></use>
+                    </svg>
+              
+                      </span>
          <svg
              class="modal-form__icon"
              aria-label="телефон клиента"
@@ -95,10 +142,33 @@
                    class="modal-form__input"
                    type="mail"
                    name="user-mail"
-                   placeholder="user@mail.com"
+                   minlength="3"
+                   placeholder=" "
                          />
-           <span class="modal-form__label--warning"></span>
-           <span class="modal-form__label--error"></span>
+                         <span class="modal-form__label--warning">
+                          E-mail должен состоять минимум из 3 символов
+                          <svg
+                          class="modal-form__label--warning-icon"
+                          aria-label="предупреждение"
+                          width="15"
+                          height="15"
+                                    >
+                      <use href="./images/icons.svg#icon-warning"></use>
+                      </svg>
+                
+                        </span>
+                        <span class="modal-form__label--error">
+                          Вы ввели некоректные данные
+                          <svg
+                          class="modal-form__label--error-icon"
+                          aria-label="ошибка"
+                          width="15"
+                          height="15"
+                                    >
+                      <use href="./images/icons.svg#icon-error"></use>
+                      </svg>
+                
+                        </span>
            <svg
                class="modal-form__icon"
                aria-label="е-мейл клиента"
@@ -109,9 +179,10 @@
            </svg>
           </label>
           <!-- payment checkbox (радио кнопки) -->
+          <p class="modal-form__subtitle">Выберите форму оплаты</p>
           <div class="modal-form__pay-type">
                 <label class="modal-form__pay-group">
-                    <input class="modal-form__checkbox" type="radio" name="user-pay" checked>
+                    <input class="modal-form__checkbox visually-hidden" type="radio" name="user-pay" checked>
                     <svg
                     class="modal-form__pay-option"
                     aria-label="Master-card"
@@ -122,7 +193,7 @@
                 </svg>
                 </label>
                 <label class="modal-form__pay-group">
-                    <input class="modal-form__checkbox" type="radio" name="user-pay">
+                    <input class="modal-form__checkbox visually-hidden" type="radio" name="user-pay">
                     <svg
                     class="modal-form__pay-option"
                     aria-label="visa"
@@ -159,7 +230,7 @@
             > использования персональных данных</span
           >
           </label>
-          <button class="btn btn--mode-light submit-btn" type="submit">Отправить</button>
+          <button class="btn btn--mode-light modal-form__submit-btn" type="submit">Отправить</button>
         </form>
       </div>
     </div>
@@ -169,21 +240,21 @@
     <main class="main">
       <!-- hero  -->
       <section class="hero" id="hero">
-        <div class="container">
+        <div class="container hero__container">
           <div class="hero__left-side">
         <ul class="hero__list socials-list list">
         <li class="hero__item">
-          <a class="hero__link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="hero__link link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
         </li>
         <li>
-          <a class="hero__link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
+          <a class="hero__link link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
         </li class="hero__item">
       </ul>
       </div>
       <div class="hero__group">
-        <p class="uppertitle hero__uppertitle" lang="en">A hair salon for men in Kyiv</p>
-        <h1 class="title" lang="en">BarberShop</h1>
-        <p class="subtitle" lang="en">
+        <p class="uppertitle uppertitle--mode-dark hero__uppertitle" lang="en">A hair salon for men in Kyiv</p>
+        <h1 class="main-title" lang="en">BarberShop</h1>
+        <p class="subtitle subtitle-title--mode-dark hero__subtitle" lang="en">
           We are experts in trendy men's haircuts. <br />
           We work quickly, carefully, and tastefully.
         </p>
@@ -194,10 +265,13 @@
     <li class="slider__item"><a href=""></a></li>
     <li class="slider__item"><a href=""></a></li>
   </ul>
-</div>
+
         <ul class="slider__controls list">
-          <li class="slider__item-contols"> <button class="slider__btn slider__btn--disable" type="button">Назад</button></li>
-          <li class="slider__item-contols"> <button class="slider__btn" type="button">Вперед</button></li>
+          <li class="slider__item-controls"> 
+            <button class="slider__btn slider__btn--disable" type="button">Назад</button></li>
+
+          <li class="slider__item-controls"> 
+            <button class="slider__btn" type="button">Вперед</button></li>
         </ul>
         </div>
       </section>
@@ -224,9 +298,9 @@
           </li>
         </ul>
         <div class="about__group" data-aos="fade-left">
-          <p class="about__uppertitle">О нас</p>
-          <h2 class="about__title">Лучший Барбершоп твоего города</h2>
-          <p class="about__subtitle subtitle">
+          <p class="uppertitle uppertitle--mode-light">О нас</p>
+          <h2 class="section-title section-title--mode-light">Лучший Барбершоп твоего города</h2>
+          <p class="subtitle subtitle-title--mode-light about__subtitle">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </p>
@@ -244,8 +318,8 @@
       <!-- section services -->
       <section class="section services" id="price">
         <div class="container">
-        <p class="uppertitle">Проведи время в компании лучших мастеров</p>
-        <h2 class="title">Услуги и цены</h2>
+        <p class="uppertitle uppertitle--mode-dark">Проведи время в компании лучших мастеров</p>
+        <h2 class="section-title section-title--mode-dark">Услуги и цены</h2>
         <ul class="price-list list">
           <li class="price-item left">
             <ul class="price-inner-list  list">
@@ -271,29 +345,29 @@
       <!-- benefits -->
       <!-- ul.list>li.item*4>p+p Охуела голова!-->
       <section class="section benefits">
-        <div class="container">
-        <ul class="list">
-          <li class="item">
-            <p class="benefits-amount">600 <sup class="plus">+</sup></p>
+        <div class="container benefits-container">
+        <ul class="benefits-stat list">
+          <li class="benefits-stat-item">
+            <p class="benefits-amount">600 <sup class="benefits-amount-decor">+</sup></p>
             <p class="benefits-text"> Довольных клиентов в день</p>
           </li>
-          <li class="item">
-            <p class="benefits-amount">50 <sup class="plus">+</sup></p>
+          <li class="benefits-stat-item">
+            <p class="benefits-amount">50 <sup class="benefits-amount-decor">+</sup></p>
             <p class="benefits-text">Наград за отличный сервис</p>
           </li>
-          <li class="item">
-            <p class="benefits-amount">20 <sup class="plus">+</sup></p>
+          <li class="benefits-stat-item">
+            <p class="benefits-amount">20 <sup class="benefits-amount-decor">+</sup></p>
             <p class="benefits-text">Лучших мастеров Киева</p>
           </li>
-          <li class="item">
-            <p class="benefits-amount">100 <sup class="plus">+</sup></p>
+          <li class="benefits-stat-item">
+            <p class="benefits-amount">100 <sup class="benefits-amount-decor">+</sup></p>
             <p class="benefits-text">Подарков постоянным клиентам</p>
           </li>
         </ul>
         <div class="benefits-group">
-        <p class="uppertitle">Старая традиционная школа</p>
-        <h2 class="title">Почему приходят <br> именно к нам?</h2>
-        <p class="subtitle">
+        <p class="uppertitle uppertitle--mode-light">Старая традиционная школа</p>
+        <h2 class="section-title section-title--mode-light">Почему приходят <br> именно к нам?</h2>
+        <p class="subtitle subtitle-title--mode-light">
           О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать,
           чем 10 раз прочитать.
         </p>
@@ -304,8 +378,8 @@
       <!-- members -->
       <section class="section members" id="team">
         <div class="container">
-        <p class="uppertitle">для настоящих ценителей атмосферы</p>
-        <h2 class="title">Наши мастера</h2>
+        <p class="uppertitle uppertitle--mode-light">для настоящих ценителей атмосферы</p>
+        <h2 class="section-title section-title--mode-light">Наши мастера</h2>
         <ul class="member-list list grid"> 
           <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="300">
           <img class="member-img" src="./images/team/member-1.jpg" alt="John Smith" width="370" height="346" />
@@ -392,7 +466,7 @@
       <!-- gallery -->
       <section class="section gallery">
         <div class="container">
-        <p class="uppertitle">На латинском языке “барба” означает “борода”</p>
+        <p class="uppertitle uppertitle--mode-light gallery-uppertitle">На латинском языке “барба” означает “борода”</p>
         <h2 class="title visually-hidden visually-hidden" >Примеры наших работ</h2>   
         <ul class="list grid">
           <li class="item grid-item">
@@ -415,9 +489,9 @@
       <!-- contacts -->
       <section class="section contacts" id="contact">
         <div class="container">
-        <h2 class="title visually-hidden">Наши контакты</h2>
+        <h2 class="section-title visually-hidden">Наши контакты</h2>
         <div class="contact-group left">
-        <p class="title">Онлайн запись</p>
+        <p class="section-title section-title--mode-dark">Онлайн запись</p>
 
 
         <form class="contact-form" name="contact-form" action="./js/method.js" method="post">
@@ -476,97 +550,6 @@
           <button class="btn btn--mode-dark" type="submit">Отправить</button>
 
         </form>
-
-      <!-- Contact form -->
-        <!-- <form class="contact-form" action="get" autocomplete="off">
-                <label class="field">
-                  <span class="label">Имя</span>
-                  <input
-                    class="input"
-                    type="text"
-                    name="name"
-                    placeholder=" "
-                  />
-                  <svg
-                    class="icon"
-                    aria-label="имя клиента"
-                    width="18"
-                    height="18"
-                  >
-                    <use href="./images/icons.svg#icon-persone"></use>
-                  </svg>
-                </label>
-
-                <label class="field">
-                  <span class="label">Телефон</span>
-                  <input class="input" type="tel" name="tel" placeholder=" " />
-                  <svg
-                    class="icon"
-                    aria-label="телефон клиента"
-                    width="18"
-                    height="18"
-                  >
-                    <use href="./images/icons.svg#icon-phone-form"></use>
-                  </svg>
-                </label>
-
-                <label class="field">
-                  <span class="label">Почта</span>
-                  <input
-                    class="input"
-                    type="email"
-                    name="email"
-                    placeholder=" "
-                  />
-                  <svg
-                    class="icon"
-                    aria-label="почта клиента"
-                    width="18"
-                    height="18"
-                  >
-                    <use href="./images/icons.svg#icon-email-form"></use>
-                  </svg>
-                </label>
-
-                <label class="field" for="coment">
-                  <span class="label">Комментарий</span>
-                  <textarea
-                    class="comment"
-                    name="coment"
-                    id="coment"
-                    cols="5"
-                    rows="4"
-                    placeholder="Введите текст"
-                  ></textarea>
-                </label>
-
-                <label class="checkbox-field">
-                  <input
-                    class="checkbox visually-hidden"
-                    type="checkbox"
-                    name="policy"
-                    value="policy"
-                  />
-                  <svg class="icon" aria-label="check" width="16" height="15">
-                    <use href="./images/icons.svg#icon-check"></use>
-                  </svg>
-
-                  <span class="label"
-                    >Соглашаюсь с рассылкой и принимаю
-                    <a
-                      class="link"
-                      href="./index.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Условия Договора</a
-                    ></span
-                  >
-                </label>
-
-                <button class="btn btn-mode-dark" type="submit">Отправить</button>
-
-
-        </form> -->
         </div>
         <div class="contact-group right">
         <p class="title">Контакты</p>
