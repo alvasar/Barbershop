@@ -58,11 +58,11 @@
                 type="text"
                 name="user-name"
                 placeholder=" "
-                minlength="3"
+                pattern="[A-Za-zА-Яа-яЁё]"
                       />
         
         <span class="alert alert--warning">
-          Имя должно состоять минимум из 3 символов
+          Имя состоит только из букв
           <svg
           class="alert-icon alert-icon--warning"
           aria-label="предупреждение"
@@ -95,88 +95,90 @@
         </svg>
           </label>
           <label class="modal-form__group">
-          <span class="modal-form__label">Телефон</span>
-           <input
-                 class="modal-form__input"
-                 type="phone"
-                 name="user-phone"
-                 minlength="9"
-                 placeholder=" "
-                       />
-                       <span class="modal-form__label--warning">
-                        Номер телефона должен состоять минимум из 9 цифр
-                        <svg
-                        class="modal-form__label--warning-icon"
-                        aria-label="предупреждение"
-                        width="15"
-                        height="15"
-                                  >
-                    <use href="./images/icons.svg#icon-warning"></use>
-                    </svg>
-              
-                      </span>
-                      <span class="modal-form__label--error">
-                        Вы ввели некоректные данные
-                        <svg
-                        class="modal-form__label--error-icon"
-                        aria-label="ошибка"
-                        width="15"
-                        height="15"
-                                  >
-                    <use href="./images/icons.svg#icon-error"></use>
-                    </svg>
-              
-                      </span>
-         <svg
-             class="modal-form__icon"
-             aria-label="телефон клиента"
-             width="18"
-             height="18"
-                       >
-         <use href="./images/icons.svg#icon-phone"></use>
-         </svg>
-          </label>
-          <label class="modal-form__group">
-            <span class="modal-form__label">Имя</span>
+            <span class="modal-form__label">Телефон</span>
              <input
                    class="modal-form__input"
-                   type="mail"
-                   name="user-mail"
-                   minlength="3"
+                   type="phone"
+                   name="user-phone"
                    placeholder=" "
+                   pattern="^\(\d{3}\)\d{3}-\d{2}-\d{2}$"
                          />
-                         <span class="modal-form__label--warning">
-                          E-mail должен состоять минимум из 3 символов
-                          <svg
-                          class="modal-form__label--warning-icon"
-                          aria-label="предупреждение"
-                          width="15"
-                          height="15"
-                                    >
-                      <use href="./images/icons.svg#icon-warning"></use>
-                      </svg>
-                
-                        </span>
-                        <span class="modal-form__label--error">
-                          Вы ввели некоректные данные
-                          <svg
-                          class="modal-form__label--error-icon"
-                          aria-label="ошибка"
-                          width="15"
-                          height="15"
-                                    >
-                      <use href="./images/icons.svg#icon-error"></use>
-                      </svg>
-                
-                        </span>
+           
+           <span class="alert alert--warning">
+             Номер телефона должен состоять только из цифр
+             <svg
+             class="alert-icon alert-icon--warning"
+             aria-label="предупреждение"
+             width="15"
+             height="15"
+                       >
+         <use href="./images/icons.svg#icon-warning"></use>
+           </svg>
+           </span>
+   
+           <span class="alert alert--error">
+             Вы ввели некоректные данные
+             <svg
+             class="alert-icon alert-icon--error"
+             aria-label="ошибка"
+             width="15"
+             height="15"
+                       >
+         <use href="./images/icons.svg#icon-error"></use>
+         </svg>
+   
+           </span>
            <svg
                class="modal-form__icon"
-               aria-label="е-мейл клиента"
+               aria-label="номер клиента"
                width="18"
                height="18"
                          >
-           <use href="./images/icons.svg#icon-mail"></use>
+           <use href="./images/icons.svg#icon-phone"></use>
            </svg>
+          </label>
+          <label class="modal-form__group">
+              <span class="modal-form__label">e-mail</span>
+               <input
+                     class="modal-form__input"
+                     type="mail"
+                     name="user-mail"
+                     placeholder=" "
+                     pattern="/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$"
+                           />
+             
+             <span class="alert alert--warning">
+               e-mail состоит из букв латинского алфавита, специальных знаков и цифр
+               <svg
+               class="alert-icon alert-icon--warning"
+               aria-label="предупреждение"
+               width="15"
+               height="15"
+                         >
+           <use href="./images/icons.svg#icon-warning"></use>
+             </svg>
+             </span>
+     
+             <span class="alert alert--error">
+               Вы ввели некоректные данные
+               <svg
+               class="alert-icon alert-icon--error"
+               aria-label="ошибка"
+               width="15"
+               height="15"
+                         >
+           <use href="./images/icons.svg#icon-error"></use>
+           </svg>
+     
+             </span>
+             <svg
+                 class="modal-form__icon"
+                 aria-label="e-mail клиента"
+                 width="18"
+                 height="18"
+                           >
+             <use href="./images/icons.svg#icon-mail"></use>
+             </svg>
           </label>
           <!-- payment checkbox (радио кнопки) -->
           <p class="modal-form__subtitle">Выберите форму оплаты</p>
@@ -242,7 +244,7 @@
       <section class="hero" id="hero">
         <div class="container hero__container">
           <div class="hero__left-side">
-        <ul class="hero__list socials-list list">
+        <ul class="hero__list socials-link-list list">
         <li class="hero__item">
           <a class="hero__link link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
         </li>
@@ -321,47 +323,47 @@
         <p class="uppertitle uppertitle--mode-dark">Проведи время в компании лучших мастеров</p>
         <h2 class="section-title section-title--mode-dark">Услуги и цены</h2>
         <ul class="price-list list">
-          <li class="price-item left">
-            <ul class="price-inner-list  list">
-              <li class="price-inner-item"><span>Мужская стрижка</span> <span>от 300 грн.</span></li>
-              <li class="price-inner-item"><span>Стрижка бороды</span> <span>от 200 грн.</span></li>
-              <li class="price-inner-item"><span>Стрижка усов</span> <span>от 200 грн.</span></li>
-              <li class="price-inner-item"><span>Бритье опасной бритвой</span> <span>от 200 грн.</span></li>
+          <li class="price-list__item price-list__item--left-side">
+            <ul class="price-list__inner-list list">
+              <li class="price-list__inner-item"><span>Мужская стрижка</span> <span>от 300 грн.</span></li>
+              <li class="price-list__inner-item"><span>Стрижка бороды</span> <span>от 200 грн.</span></li>
+              <li class="price-list__inner-item"><span>Стрижка усов</span> <span>от 200 грн.</span></li>
+              <li class="price-list__inner-item"><span>Бритье опасной бритвой</span> <span>от 200 грн.</span></li>
             </ul>
           </li>
-          <li class="price-item right">
-              <ul class="price-inner-list  list">
-               <li class="price-inner-item"><span>Cтрижка у стажера</span> <span>от 50 грн.</span></li>
-               <li class="price-inner-item"><span>Стрижка под насадку</span> <span>от 200 грн.</span></li>
-               <li class="price-inner-item"><span>Детская стрижка (до 12 лет)</span> <span>от 300 грн.</span></li>
-               <li class="price-inner-item"><span>Камуфлирование седины</span> <span>от 200 грн.</span></li> 
+          <li class="price-list__item price-list__item--right-side">
+              <ul class="price-list__inner-list list">
+               <li class="price-list__inner-item"><span>Cтрижка у стажера</span> <span>от 50 грн.</span></li>
+               <li class="price-list__inner-item"><span>Стрижка под насадку</span> <span>от 200 грн.</span></li>
+               <li class="price-list__inner-item"><span>Детская стрижка (до 12 лет)</span> <span>от 300 грн.</span></li>
+               <li class="price-list__inner-item"><span>Камуфлирование седины</span> <span>от 200 грн.</span></li> 
             </ul>
           </li>
         </ul>
-        <button class="btn btn--mode-dark" type="button">Онлайн запись</button>
+        <button class="btn btn--mode-dark services__btn" type="button">Онлайн запись</button>
         </div>
       </section>
 
       <!-- benefits -->
       <!-- ul.list>li.item*4>p+p Охуела голова!-->
       <section class="section benefits">
-        <div class="container benefits-container">
-        <ul class="benefits-stat list">
-          <li class="benefits-stat-item">
-            <p class="benefits-amount">600 <sup class="benefits-amount-decor">+</sup></p>
-            <p class="benefits-text"> Довольных клиентов в день</p>
+        <div class="container benefits__container">
+        <ul class="benefits-list list">
+          <li class="benefits-list__item">
+            <p class="benefits-list__amount">600 <sup class="benefits-list__amount--decor">+</sup></p>
+            <p class="benefits-list__text"> Довольных клиентов в день</p>
           </li>
-          <li class="benefits-stat-item">
-            <p class="benefits-amount">50 <sup class="benefits-amount-decor">+</sup></p>
-            <p class="benefits-text">Наград за отличный сервис</p>
+          <li class="benefits-list__item">
+            <p class="benefits-list__amount">50 <sup class="benefits-list__amount--decor">+</sup></p>
+            <p class="benefits__text">Наград за отличный сервис</p>
           </li>
-          <li class="benefits-stat-item">
-            <p class="benefits-amount">20 <sup class="benefits-amount-decor">+</sup></p>
-            <p class="benefits-text">Лучших мастеров Киева</p>
+          <li class="benefits-list__item">
+            <p class="benefits-list__amount">20 <sup class="benefits-list__amount--decor">+</sup></p>
+            <p class="benefits__text">Лучших мастеров Киева</p>
           </li>
-          <li class="benefits-stat-item">
-            <p class="benefits-amount">100 <sup class="benefits-amount-decor">+</sup></p>
-            <p class="benefits-text">Подарков постоянным клиентам</p>
+          <li class="benefits-list__item">
+            <p class="benefits-list__amount">100 <sup class="benefits-list__amount--decor">+</sup></p>
+            <p class="benefits__text">Подарков постоянным клиентам</p>
           </li>
         </ul>
         <div class="benefits-group">
@@ -387,21 +389,21 @@
             <h3 class="member-title" lang="en">John Smith</h3>
             <p class="member-position" lang="en">Extreme Barber</p>
           </div>
-            <ul class="social-list list">
-              <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
+            <ul class="socials list">
+              <li class="socials-item">
+                <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg class="socials-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
                 </li>
-                           <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                           <li class="socials-item">
+                <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
                   <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
                 </li>
-                            <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                            <li class="socials-item">
+                <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
                   <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
                 </li>
-                            <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                            <li class="socials-item">
+                <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
                   <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
                 </li>
             </ul>
@@ -412,24 +414,24 @@
             <h3 class="member-title">Michele Doe</h3>
              <p class="member-position" lang="en">Extreme Barber</p>
           </div>
-            <ul class="social-list list">
-              <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
-                </li>
-                           <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
-                </li>
-                            <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
-                </li>
-                            <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
-                </li>
-            </ul>
+          <ul class="socials list">
+            <li class="socials-item">
+              <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                <svg class="socials-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
+              </li>
+                         <li class="socials-item">
+              <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
+              </li>
+                          <li class="socials-item">
+              <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
+              </li>
+                          <li class="socials-item">
+              <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
+              </li>
+          </ul>
           </li>
           <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="900">
             <img class="member-img" src="./images/team/member-3.jpg" alt="Alan Black" width="370" height="346" />
@@ -439,24 +441,24 @@
             <h3 class="member-title" lang="en">Alan Black</h3>
             <p class="member-position" lang="en">Extreme Barber</p>
           </div>
-            <ul class="social-list list">
-              <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
-                </li>
-                           <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Твитер"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
-                </li>
-                            <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Фейсбук"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
-                </li>
-                            <li class="social-item">
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
-                  <svg class="social-icon" width="20" height="20" aria-label="Линкедин"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
-                </li>
-            </ul>
+          <ul class="socials list">
+            <li class="socials-item">
+              <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                <svg class="socials-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-instagram"></use></svg></a>
+              </li>
+                         <li class="socials-item">
+              <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-twitter"></use></svg></a>
+              </li>
+                          <li class="socials-item">
+              <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-facebook"></use></svg></a>
+              </li>
+                          <li class="socials-item">
+              <a class="socials-link link" href="http://" target="_blank" rel="noopener noreferrer">
+                <svg class="social-icon" width="20" height="20" aria-label="Инстарграм"><use href="./images/icons.svg#icon-linkedin"></use></svg></a>
+              </li>
+          </ul>
           </li>
         </ul>
        </div>
@@ -488,10 +490,9 @@
 
       <!-- contacts -->
       <section class="section contacts" id="contact">
-        <div class="container">
-        <h2 class="section-title visually-hidden">Наши контакты</h2>
-        <div class="contact-group left">
-        <p class="section-title section-title--mode-dark">Онлайн запись</p>
+        <div class="container contacts__container">
+       <div class="contact-group left">
+        <h2 class="section-title section-title--mode-dark contacts__section-title">Онлайн запись</h2>
 
 
         <form class="contact-form" name="contact-form" action="./js/method.js" method="post">
@@ -589,13 +590,13 @@
       </ul>
       </div>
     </footer>
-    <button class="scroll-to-top" type="button"  href="#about">
+       <a class="scroll-to-top" href="#hero">
       <svg class="arrow-top" width="20" height="20">
         <use href="./images/icons.svg#arrow-top"></use>
       </svg>
-    </button>
+    </a>
 
-    <div class="chat-menu">
+    <!-- <div class="chat-menu">
       <button class="chat-menu-btn" type="button"></button>
       <ul class="chat-menu-list list">
               <li class="chat-menu-item" style="--item: 1">
@@ -613,7 +614,7 @@
 
         </li>
       </ul>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
     <script src="./js/header-scroll.js"></script>
     <!-- AOS aniamtion library -->
