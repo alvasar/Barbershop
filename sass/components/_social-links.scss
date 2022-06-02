@@ -7,7 +7,7 @@
     height: 1px;
     margin-right: 40px;
   
-    background-color: $btn-dark-cl;
+    background-color: var(--btn-dark-cl);
   }
   
   .social-links-item:not(:last-child) {
@@ -20,11 +20,11 @@
     line-height: 1.36;
     letter-spacing: 0.2em;
   
-    color: $btn-dark-cl;
-    transition: color $transition-duration $transition-timing-function;
+    color: var(--btn-dark-cl);
+    transition: color var(--transition-duration) var(--transition-timing-function);
   }
   
   .social-links-item-link:hover,
   .social-links-item-link:focus {
-    color: $accent-cl;
+    color: var(--accent-cl);
   }

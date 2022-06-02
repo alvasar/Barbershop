@@ -1,6 +1,6 @@
 /*#region about*/
 .about {
-  background-color: $main-bg-cl;
+  background-color: var(--main-bg-cl);
 
   &__container {
         display: flex;
@@ -21,9 +21,10 @@
   }
 
   &__img {
-        transition: transform $transition-duration $transition-timing-function;
+        transition: transform var(--transition-duration) var(--transition-timing-function);
       }
-      &__item:hover &__img {
+  
+  &__item:hover &__img {
         transform: scale(1.15)
       }
 }
@@ -43,7 +44,7 @@
     font-size: 14px;
     line-height: 1.86;
     letter-spacing: 0.02em;
-    color: $main-txt-cl;
+    color: var(--main-txt-cl);
   }
   
   /*#endregion*/

@@ -4,9 +4,9 @@
   display: flex;
   flex-wrap: wrap;
 
-  gap: $indent;
+  gap: var(--indent);
 }
 
 .grid-item {
-  flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+  flex-basis: calc((100% - var(--indent) * (var(--items)- 1)) / var(--items));
 }

@@ -1,6 +1,6 @@
 /*#region benefits*/
 .benefits {
-    background-color: $main-bg-cl;
+    background-color: var(--main-bg-cl);
 
     &__container {
         display: flex;
@@ -17,7 +17,7 @@
     &__item {
         width: 170px;
         padding: 20px;
-        background-color: #F7F7F7;
+        background-color: var(--secondary-bg-cl);
       }
 
       &__item:nth-child(2n) {
@@ -35,7 +35,7 @@
         text-align: center;
         letter-spacing: 0.05em;
       
-        color: #303030;
+        color: var(--btn-dark-cl);
       }
 
       &__amount--decor {
@@ -47,7 +47,7 @@
         line-height: 1.38;
         text-align: center;
       
-        color: $accent-cl;
+        color: var(--accent-cl);
       }
 
       &__text {
@@ -57,7 +57,7 @@
         letter-spacing: normal;
         text-align: center;
       
-        color: $btn-dark-cl;
+        color: var(--btn-dark-cl);
       }
   }
   

@@ -1,10 +1,10 @@
 /*#region members*/
-.members {
-    background-color: $secondary-bg-cl;
+.member {
+  background-color: var(--secondary-bg-cl);
 
      /* member-card */
   &__item {
-    $items:3;
+    --items:3;
   }
 
   &__img {
@@ -17,7 +17,7 @@
     line-height: 1.39;
     text-align: center;
     letter-spacing: 0.02em;
-    color: $btn-dark-cl;
+    color: var(--btn-dark-cl);
   
     margin-bottom: 8px;
   }
@@ -28,7 +28,7 @@
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.02em;
-    color: $accent-cl;
+    color: var(--accent-cl);
   
     margin-bottom: 30px;
  }
@@ -45,7 +45,7 @@
         margin-right: 10px;
       }
 
-      &__link {
+    &__link {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -53,19 +53,19 @@
         width: 44px;
         height: 44px;
       
-        background-color: $main-bg-cl;
-        color: $btn-dark-cl;
+        background-color: var(--main-bg-cl);
+        color: var(--btn-dark-cl);
       
         border-radius: 50%;
       
         transition: 
-        fill $transition-duration $transition-timing-function,
-        color $transition-duration $transition-timing-function;
+        fill var(--transition-duration) var(--transition-timing-function),
+        color var(--transition-duration) var(--transition-timing-function);
       }
 
       &__link:hover,
       &__link:focus {
-        color: $accent-cl;
+        color: var(--accent-cl);
       }
 
       &__icon {

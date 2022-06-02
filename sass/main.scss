@@ -4,17 +4,29 @@
   'abstracts/placeholders';
 
 @import
-  'vendors/normalize';
+  'vendors/normalize',
+  'vendors/visually-hidden';
 
 @import
   'base/base',
   'base/reset',
-  'base/typography';
+  'base/js-selectors',
+  'base/container',
+  'base/common',
+  'base/grid',
+  'base/animations'; 
 
 @import
-  'layout/grid',
-  'layout/social-links',
-  'layout/slider',
+'components/buttons',
+'components/modal-form',
+'components/navigation',
+'components/slider',
+'components/social-links',
+'components/navigation';
+
+
+
+@import
   'layout/header',
   'layout/hero',
   'layout/about',
@@ -24,4 +36,8 @@
   'layout/footer';
 
 @import
-  'components/buttons';
+  'components/buttons',
+  'components/social-links',
+  'components/slider';
+
+

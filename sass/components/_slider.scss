@@ -22,18 +22,18 @@
     line-height: 1.36;
     text-align: right;
     letter-spacing: 0.1em;
-    color: $main-bg-cl;
+    color: var(--main-bg-cl);
     background-color: transparent;
     cursor: pointer;
   
     border: 0;
-    border-bottom: 1px solid $main-bg-cl;
+    border-bottom: 1px solid var(--main-bg-cl);
   }
   
   .slider__btn--disable {
     text-align: left;
-    color: $uppertitle;
-    border-bottom: 1px solid $uppertitle;
+    color: var(--uppertitle);
+    border-bottom: 1px solid var(--uppertitle);
   
     position:relative;
     top: 0px;
@@ -61,5 +61,5 @@
   
   .slider__item--active {
     width: 100%;
-    background-color: $main-bg-cl;
+    background-color: var(--main-bg-cl);
   }

@@ -10,9 +10,9 @@
     background-color: rgba(0, 0, 0, 0.2);
   
     transition:
-      opacity $transition-duration $transition-timing-function,
-      transform $transition-duration $transition-timing-function,
-      visibility $transition-duration $transition-timing-function;
+      opacity var(--transition-duration) var(--transition-timing-function),
+      transform var(--transition-duration) var(--transition-timing-function),
+      visibility var(--transition-duration) var(--transition-timing-function);
   }
   
   .backdrop.is-hidden {
@@ -29,13 +29,13 @@
     padding: 25px;
     width: 500px;
   
-    background-color: $main-bg-cl;
+    background-color: var(--main-bg-cl);
     border-radius: 2%;
   
     transform: translate(-50%, -50%);
   
     transition:
-    transform $transition-duration $transition-timing-function;
+    transform var(--transition-duration) var(--transition-timing-function);
   }
   /* початковий стан елемента перед анімацією */
   .backdrop.is-hidden .modal-wrapper {
@@ -63,15 +63,15 @@
     border-radius: 50%;
   
     background-color: transparent;
-    border: 1px solid $btn-dark-cl;
+    border: 1px solid var(--btn-dark-cl);
   
     cursor: pointer;
   
-    transition: border $transition-duration $transition-timing-function;
+    transition: border var(--transition-duration) var(--transition-timing-function);
   }
   .modal-btn:hover,
   .modal-btn:focus {
-    border: 1px solid $accent-cl;
+    border: 1px solid var(--accent-cl);
   }
   
   /* modal-form */
@@ -136,7 +136,7 @@
        left: 10px;
        fill: var(--btn-dark-cl);
   
-       transition: fill $transition-duration $transition-timing-function;
+       transition: fill var(--transition-duration) var(--transition-timing-function);
     }
 
     &__input:valid:not(:placeholder-shown)~&__icon {
@@ -166,7 +166,7 @@
   
        opacity: 0;
   
-       transition: opacity $transition-duration $transition-timing-function;
+       transition: opacity var(--transition-duration) var(--transition-timing-function);
     }
 
     &__alert--error {
@@ -188,7 +188,7 @@
        opacity: 0;
        transform: scale(0.3);
   
-       transition: fill $transition-duration $transition-timing-function;
+       transition: fill var(--transition-duration) var(--transition-timing-function);
     }
 
     &__alert-icon--warning {
@@ -229,10 +229,10 @@
     }
   
     &__pay-option {
-      fill: $accent-cl;
+      fill: var(--accent-cl);
       filter: grayscale(1);
   
-      transition: filter $transition-duration $transition-timing-function;
+      transition: filter var(--transition-duration) var(--transition-timing-function);
     }
   
     &__checkbox:checked+&__pay-option {
@@ -256,28 +256,28 @@
     
     margin-right: 10px;
   
-    outline: 2px solid $accent-cl;
+    outline: 2px solid var(--accent-cl);
     border-radius: 4px;
     outline-offset: -2px;
   }
   
   &__custom-checkbox-icon {
     opacity: 0;
-    fill: $main-bg-cl;
+    fill: var(--main-bg-cl);
     transition: 
-    opacity $transition-duration $transition-timing-function,
-    background-color $transition-duration $transition-timing-function;
+    opacity var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function);
   }
   
   &__checkbox:checked+&__custom-checkbox {
-    background-color: $accent-cl;
+    background-color: var(--accent-cl);
   }
   
   &__checkbox:checked+&__custom-checkbox &__custom-checkbox-icon {
     opacity: 1;
   }
   &__link {
-    color: $accent-cl;
+    color: var(--accent-cl);
   }
   
   &__policy-description {
@@ -287,11 +287,6 @@
   &__submit-btn {
     display: block;
     margin: 0 auto;
-    transition: background-color $transition-duration $transition-timing-function;
-  }
-  
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
+  }  
 }
-  
-  
-  
-  

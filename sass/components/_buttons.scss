@@ -1,39 +1,25 @@
 /* Стили кнопки */
 
 .btn {
-    padding: 12px 20px;
-    max-width: 200px;
-    min-width: 160px;
-    min-height: 40px;
-  
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-  
-    border: 1px solid $accent-cl;
-    border-radius: 25px;
-    background-color: transparent;
-    cursor: pointer;
-  
-    transition: color $transition-duration $transition-timing-function,
-    background-color $transition-duration $transition-timing-function;
+  @include btn;
     
+    &:hover,
+    &:focus {
+      color: var(--secondary-txt-cl);
+      background-color: var(--accent-cl);
+    }
+    &--mode-light {
+      color: var(--btn-dark-cl);
+    }
+    
+    &--mode-dark {
+      color: var(--secondary-txt-cl);
+    }
+
+
   }
   
-  .btn:hover,
-  .btn:focus {
-    color: $secondary-txt-cl;
-    background-color: $accent-cl;
-  }
+
   
-  .btn--mode-light {
-    color: $btn-dark-cl;
-  }
-  
-  .btn--mode-dark {
-    color: $secondary-txt-cl;
-  }
+
   
