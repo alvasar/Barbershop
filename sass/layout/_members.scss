@@ -1,0 +1,75 @@
+/*#region members*/
+.members {
+    background-color: $secondary-bg-cl;
+
+     /* member-card */
+  &__item {
+    $items:3;
+  }
+
+  &__img {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $btn-dark-cl;
+  
+    margin-bottom: 8px;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $accent-cl;
+  
+    margin-bottom: 30px;
+ }
+
+}
+  
+  /* Social icons */
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+        width: 44px;
+        height: 44px;
+      
+        background-color: $main-bg-cl;
+        color: $btn-dark-cl;
+      
+        border-radius: 50%;
+      
+        transition: 
+        fill $transition-duration $transition-timing-function,
+        color $transition-duration $transition-timing-function;
+      }
+
+      &__link:hover,
+      &__link:focus {
+        color: $accent-cl;
+      }
+
+      &__icon {
+        fill: currentColor;
+      }
+  }  
+  /*#endregion*/

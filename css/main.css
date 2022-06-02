@@ -1411,6 +1411,81 @@ img {
 }
 
 /*#endregion*/
+/*#region members*/
+.members {
+  background-color: #F7F7F7;
+  /* member-card */
+}
+
+.members__img {
+  margin-bottom: 30px;
+}
+
+.members__title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-bottom: 8px;
+}
+
+.members__position {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FF6C00;
+  margin-bottom: 30px;
+}
+
+/* Social icons */
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #FFFFFF;
+  color: #303030;
+  border-radius: 50%;
+  -webkit-transition: fill 400ms cubic-bezier(0.4, 0, 0.2, 1), color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 400ms cubic-bezier(0.4, 0, 0.2, 1), color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials__link:hover, .socials__link:focus {
+  color: #FF6C00;
+}
+
+.socials__icon {
+  fill: currentColor;
+}
+
+/*#endregion*/
 /* Стили кнопки */
 .btn {
   padding: 12px 20px;
