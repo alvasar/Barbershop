@@ -12,41 +12,69 @@
     background-position: top right, center;
     background-repeat: no-repeat;
     
-      &__container {
-        display: flex;
-        position: relative;
-      }
+    &__container {
+      display: flex;
+      position: relative;
+    }
 
-      &__left-side {
-        display: flex;
-        align-items: flex-end;
+    &__left-side {
+      display: flex;
+      align-items: flex-end;
         
-        width: 100px;
-      }
+      width: 100px;
+    }
 
-      &__list {
-        display: flex;
-        align-items: center;
-        transform: rotate(-90deg) translateY(100%);
-        transform-origin: left top;
-      }
+    &__list {
+      display: flex;
+      align-items: center;
+      transform: rotate(-90deg) translateY(100%);
+      transform-origin: left top;
+    }
 
-      &__hero__group {
-        flex-grow: 1;
+    &__list::before {
+      content: '';
+      display: block;
+      width: 60px;
+      border-bottom: 1px solid;
+      margin-right: 40px;
+      color: var(--btn-dark-cl);
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__link {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 1.36;
+      letter-spacing: 0.2em;
+      color: $btn-dark-cl;
+    
+      transition: $transition-duration $transition-timing-function;
+    }
+    
+    &__link:hover,
+    &__link:focus {
+      color: $accent-cl;
+    }
+
+    &__group {
+      flex-grow: 1;
       
-        margin-left: 100px;
-        margin-top: 272px;
-        margin-bottom: 206px;
-      }
+      margin-left: 100px;
+      margin-top: 272px;
+      margin-bottom: 206px;
+    }
 
-      &__uppertitle {
-        animation: fade-left-to-right 0.6s $transition-timing-function;
-      }
+    &__uppertitle {
+      animation: fade-left-to-right 0.6s $transition-timing-function;
+    }
 
-      &__subtitle {
-        width: 476px;
-        animation: fade-bootom-to-top 2s $transition-timing-function;
-      }
+    &__subtitle {
+      width: 476px;
+      animation: fade-bootom-to-top 2s $transition-timing-function;
+    }
       
   }
      
@@ -62,8 +90,6 @@
   
     animation: fade-left-to-right 1s ease-out;
   }
-  
-
   
   @keyframes expand {
     0% {
