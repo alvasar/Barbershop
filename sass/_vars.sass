@@ -1,0 +1,63 @@
+/*#region root*/
+:root {
+  /* fonts */
+  --main-font: 'Open+Sans', sans-serif;
+  --seondary-font: 'Raleway', sans-serif;
+
+  /* text colors*/
+  --accent-cl: #FF6C00;
+  --main-txt-cl: #555555;
+  --services-txt-cl: #9DA4BD;
+  --secondary-txt-cl: #FFFFFF;
+  --uppertitle: rgba(157, 164, 189, 0.6);
+  --subtitle: rgba(157, 164, 189, 1);
+
+  /* background colors */
+  --main-bg-cl: #FFFFFF;
+  --secondary-bg-cl: #F7F7F7;
+  --dark-bg-cl: #191C26;
+
+  /*button colors */
+  --btn-dark-cl: #303030;
+
+  /*  grid items*/
+  --items: 1;
+  --indent: 30px;
+
+  /* animation */
+  --slow-anim: 700ms ease;
+  --transition-duration: 400ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*#endregion*/
+/*#region common rules*/
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--main-txt-cl) font-family: var(--main-font), sans-serif;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
