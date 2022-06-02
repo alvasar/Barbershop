@@ -1,0 +1,12 @@
+/*Сетка для коллекции*/
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: $indent;
+}
+
+.grid-item {
+  flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+}

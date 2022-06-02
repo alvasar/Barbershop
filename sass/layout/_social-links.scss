@@ -1,0 +1,30 @@
+/* Ссылки на соц.сети */
+
+.social-links-list:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    margin-right: 40px;
+  
+    background-color: $btn-dark-cl;
+  }
+  
+  .social-links-item:not(:last-child) {
+    margin-right: 40px;
+  }
+  
+  .social-links-item-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+  
+    color: $btn-dark-cl;
+    transition: color $transition-duration $transition-timing-function;
+  }
+  
+  .social-links-item-link:hover,
+  .social-links-item-link:focus {
+    color: $accent-cl;
+  }

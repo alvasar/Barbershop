@@ -1,0 +1,65 @@
+/* Слайдер */
+
+.slider__controls {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider__item-controls:not(:last-child) {
+    margin-right: 26px;
+  }
+  
+  .slider__btn {
+    width: 60px;
+    height: 24px;
+  
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: right;
+    letter-spacing: 0.1em;
+    color: $main-bg-cl;
+    background-color: transparent;
+    cursor: pointer;
+  
+    border: 0;
+    border-bottom: 1px solid $main-bg-cl;
+  }
+  
+  .slider__btn--disable {
+    text-align: left;
+    color: $uppertitle;
+    border-bottom: 1px solid $uppertitle;
+  
+    position:relative;
+    top: 0px;
+  }
+  .slider__pagination {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    width: 18px;
+  }
+  
+  .slider__item {
+    margin-left: auto;
+    margin-bottom: 12px;
+    width: 8px;
+    height: 2px;
+    background-color: #9da4bd;
+  }
+  
+  .slider__item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .slider__item--active {
+    width: 100%;
+    background-color: $main-bg-cl;
+  }

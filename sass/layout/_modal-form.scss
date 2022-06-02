@@ -1,0 +1,297 @@
+/* modal form */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  
+    transition:
+      opacity $transition-duration $transition-timing-function,
+      transform $transition-duration $transition-timing-function,
+      visibility $transition-duration $transition-timing-function;
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .modal-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    padding: 25px;
+    width: 500px;
+  
+    background-color: $main-bg-cl;
+    border-radius: 2%;
+  
+    transform: translate(-50%, -50%);
+  
+    transition:
+    transform $transition-duration $transition-timing-function;
+  }
+  /* початковий стан елемента перед анімацією */
+  .backdrop.is-hidden .modal-wrapper {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0;
+  }
+  
+  /* кінцевий стан елемента після анімації */
+  .backdrop .modal-wrapper {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  
+  .modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+  
+    border-radius: 50%;
+  
+    background-color: transparent;
+    border: 1px solid $btn-dark-cl;
+  
+    cursor: pointer;
+  
+    transition: border $transition-duration $transition-timing-function;
+  }
+  .modal-btn:hover,
+  .modal-btn:focus {
+    border: 1px solid $accent-cl;
+  }
+  
+  /* modal-form */
+  
+  .modal-title {
+    display: block;
+    margin-bottom: 25px;
+  
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.67;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: currentColor;
+  }
+
+  .modal-form {
+    &__group {
+       position: relative;
+       display: block;
+       margin-bottom: 20px;
+    }
+
+    &__label {
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+    }
+    
+    &__label::before {
+        content: "\002A";
+        position: absolute;
+        top:0;
+        right: -12px;
+        color: red;
+    }
+
+  /* Стилізація інпута */
+
+    &__input {
+        width: 100%;
+        padding: 12px 40px;
+      
+        border-radius: 5px;
+        border: 1px solid #191c26;
+        outline: transparent;
+    }
+    
+    &__input:invalid:not(:placeholder-shown) {
+        border-color: #e22f37;
+    }
+    
+    &__input:valid:not(:placeholder-shown) {
+        border-color: #69e883;
+    }
+      
+     /* Стилизация иконок */
+    &__icon {
+       position: absolute;
+       bottom: 12px;
+       left: 10px;
+       fill: var(--btn-dark-cl);
+  
+       transition: fill $transition-duration $transition-timing-function;
+    }
+
+    &__input:valid:not(:placeholder-shown)~&__icon {
+        fill: #69e883;
+    }
+
+    &__input:focus~&__icon {
+        fill: #ffc039;
+      }
+
+    &__input:invalid:not(:placeholder-shown)~&__icon {
+        fill: #e22f37;
+      }
+      
+  /* Стилизация предупреждений */
+    &__alert {
+       position: absolute;
+       bottom: -22px;
+       left: 10px;
+  
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+    
+       width: 90%;
+       font-size: 10px;
+  
+       opacity: 0;
+  
+       transition: opacity $transition-duration $transition-timing-function;
+    }
+
+    &__alert--error {
+        color: #e22f37;
+    }
+
+  
+    &__alert--warning {
+       color: #ffc039;
+    }
+
+    &__alert__icon {
+       position: absolute;
+       right: 10px;
+       bottom: 12px;
+  
+       display: inline-flex;
+       fill: currentColor;
+       opacity: 0;
+       transform: scale(0.3);
+  
+       transition: fill $transition-duration $transition-timing-function;
+    }
+
+    &__alert-icon--warning {
+       fill: #ffc039 ;
+    }
+
+    &__alert-icon--error {
+    fill: #e22f37;
+    }
+
+    &__input:focus~&__alert--warning,
+    &__input:focus~&__alert-icon--warning {
+       letter-spacing: 0.01em;
+       opacity: 1;
+       transform: scale(1);
+    }
+
+    &__input:not(:placeholder-shown)~&__alert--warning,
+    &:not(:placeholder-shown)~&__alert-icon--warning {
+       opacity: 0;
+    }
+    
+    &__input:invalid:not(:placeholder-shown)~&__alert--error, 
+    &__input:invalid:not(:placeholder-shown)~&__alert-icon--error {
+       letter-spacing: 0.01em;
+       opacity: 1;
+       transform: scale(1);  
+    }
+  
+/* payment checkbox (радио кнопки) */
+    &__pay-type {
+       display: flex;
+       align-items: center;  
+    }
+  
+    &__pay-group:not(:last-child) {
+       margin-right: 20px;
+    }
+  
+    &__pay-option {
+      fill: $accent-cl;
+      filter: grayscale(1);
+  
+      transition: filter $transition-duration $transition-timing-function;
+    }
+  
+    &__checkbox:checked+&__pay-option {
+    filter: grayscale(0);
+    }
+  /* chekbox-style */
+  
+  &__policy-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  &__custom-checkbox {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-right: 10px;
+  
+    outline: 2px solid $accent-cl;
+    border-radius: 4px;
+    outline-offset: -2px;
+  }
+  
+  &__custom-checkbox-icon {
+    opacity: 0;
+    fill: $main-bg-cl;
+    transition: 
+    opacity $transition-duration $transition-timing-function,
+    background-color $transition-duration $transition-timing-function;
+  }
+  
+  &__checkbox:checked+&__custom-checkbox {
+    background-color: $accent-cl;
+  }
+  
+  &__checkbox:checked+&__custom-checkbox &__custom-checkbox-icon {
+    opacity: 1;
+  }
+  &__link {
+    color: $accent-cl;
+  }
+  
+  &__policy-description {
+    font-size: 14px;
+  }
+  
+  &__submit-btn {
+    display: block;
+    margin: 0 auto;
+    transition: background-color $transition-duration $transition-timing-function;
+  }
+  
+}
+  
+  
+  
+  
