@@ -17,12 +17,14 @@
   'base/animations'; 
 
 @import
-'components/buttons',
-'components/modal-form',
-'components/navigation',
-'components/slider',
-'components/social-links',
-'components/navigation';
+  'components/navigation',
+  'components/buttons',
+  'components/scroll-to-top-button',
+  'components/modal-form',
+  'components/contact-form',
+  'components/slider',
+  'components/social-links',
+  'components/chat-menu';
 
 
 
@@ -33,11 +35,8 @@
   'layout/services',
   'layout/benefits',
   'layout/members',
+  'layout/gallery',
+  'layout/contacts',
   'layout/footer';
-
-@import
-  'components/buttons',
-  'components/social-links',
-  'components/slider';
 
 

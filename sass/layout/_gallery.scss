@@ -1,0 +1,29 @@
+/*#region gallery*/
+.gallery {
+    background-color: var(--main-bg-cl);
+    &__uppertitle {
+        margin-bottom: 44px;
+      }
+  }
+  
+  .gallery-list {
+      &__item {
+        position: relative;
+      
+        --items: 4;
+      }
+
+      &__item::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+      
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+  }
+ 
+  /*#endregion*/

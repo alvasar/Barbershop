@@ -1,0 +1,72 @@
+/*#region contacts*/
+.contacts {
+    background-color: var(--dark-bg-cl);
+  
+    background-image: url('../images/contact/Bg.png');
+    background-repeat: no-repeat;
+    background-position: top left calc(50% + 312px);
+    
+    &__container {
+        display: flex;
+      }
+  }
+  
+  
+  .contact {
+    width: calc(100%/2);
+  
+    &__time-title {
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--secondary-txt-cl);
+      }
+      
+     &__time {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.67;
+        letter-spacing: 0.02em;
+        color: var(--services-txt-cl);
+      }
+}
+  
+  .contact--left-side {
+    background-color: var(--dark-bg-cl);
+    width: 560px;
+  }
+  
+  .contact__section-title {
+    margin-bottom: 60px;
+  }
+
+  .contact--right-side {
+    margin-left: 100px;
+  }
+  
+  .icons-list {
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--services-txt-cl);
+
+    &__item:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+    &__item:nth-last-child(1) {
+        margin-bottom: 70px;
+        text-decoration: underline;
+      }
+
+    &__icon {
+        margin-right: 16px;
+        fill: transparent;
+      }
+  }
+  
+  /*#endregion*/

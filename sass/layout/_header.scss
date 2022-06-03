@@ -9,7 +9,13 @@
     &__container {
         display: flex;
         align-items: center;
-        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        // position: absolute;
+        // left: 50%;
+        // right: 50%;
+        // transform: translate(-51%);
+        // z-index: 99;
       }
 }
   
