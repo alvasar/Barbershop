@@ -8,14 +8,7 @@
 
     &__container {
         display: flex;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        // position: absolute;
-        // left: 50%;
-        // right: 50%;
-        // transform: translate(-51%);
-        // z-index: 99;
+        align-items: center;  
       }
 }
   
@@ -33,10 +26,7 @@
         margin-right: 40px;
         display: block;
         color:var(--secondary-txt-cl);
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 1.33;
-        letter-spacing: 0.1em;
+        @include fonts (600, 12px, 1.33, 0.1em);
         text-decoration: none;
         padding: 52px 0 52px 0;
       

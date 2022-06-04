@@ -7,15 +7,12 @@
     margin-bottom: 20px;
   
     display: flex;
-    align-items: center;
-
-    // @include fonts (600, 11px, 1.36, 9.1em);
-  
-    // font-weight: 600;
-    // font-size: 11px;
-    // line-height: 1.36;
-    // letter-spacing: 0.1em;
-    // text-transform: uppercase;
+    align-items: center;  
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
   
   .uppertitle::before {

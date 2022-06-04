@@ -385,6 +385,11 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .uppertitle::before {
@@ -1333,8 +1338,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .logo {
@@ -1357,7 +1360,7 @@ img {
   color: var(--secondary-txt-cl);
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 0.11;
   letter-spacing: 0.1em;
   text-decoration: none;
   padding: 52px 0 52px 0;
