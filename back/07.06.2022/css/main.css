@@ -21,6 +21,7 @@
   --items: 1;
   --indent: 30px;
   /* animation */
+  --slow-anim: 700ms ease;
   --transition-duration: 400ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -363,47 +364,17 @@ img {
 }
 
 .container {
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    width: 448px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 720px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
+  outline: 1px solid tomato;
 }
 
 .section {
-  padding-top: 84px;
-  padding-bottom: 84px;
-}
-
-@media screen and (min-width: 768px) {
-  .section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 .uppertitle {
@@ -1511,6 +1482,63 @@ img {
 
 /*#endregion*/
 /*#region about*/
+.about {
+  background-color: var(--main-bg-cl);
+}
+
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 64px;
+}
+
+.about-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-list__item {
+  overflow: hidden;
+}
+
+.about-list__img {
+  -webkit-transition: -webkit-transform var(--transition-duration) var(--transition-timing-function);
+  transition: -webkit-transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
+}
+
+.about-list__item:hover .about-list__img {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.about__group {
+  width: 500px;
+}
+
+.about__subtitle {
+  margin-bottom: 20px;
+}
+
+.about__description {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
+}
+
 /*#endregion*/
 /*#region services*/
 .services {

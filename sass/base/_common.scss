@@ -1,7 +1,20 @@
 .section {
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 84px;
+    padding-bottom: 84px;
+
+    // tablet sreen from 468
+    @media screen and (min-width: 768px) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  
+    // desktop sreen from 1200px
+    @media screen and (min-width: 1200px) {
+      padding-top: 130px;
+      padding-bottom: 130px;    }
   }
+
+
   
   .uppertitle {
     margin-bottom: 20px;
@@ -42,11 +55,15 @@
   
   .section-title {
     margin-bottom: 20px;
+
+    // @include fonts (700, )
   
     font-weight: 700;
     font-size: 42px;
     line-height: 1.16;
     letter-spacing: 0.05em;
+
+
   }
   
   .section-title--mode-light {
@@ -58,6 +75,8 @@
   }
   
   .subtitle {
+  //  @include fonts (null,  )
+
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;
