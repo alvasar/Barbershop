@@ -3,29 +3,26 @@
     padding-bottom: 84px;
 
     // tablet sreen from 468
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       padding-top: 100px;
       padding-bottom: 100px;
     }
   
+  
     // desktop sreen from 1200px
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       padding-top: 130px;
-      padding-bottom: 130px;    }
+      padding-bottom: 130px;
+    }
   }
 
 
-  
   .uppertitle {
     margin-bottom: 20px;
   
     display: flex;
-    align-items: center;  
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    align-items: center;
+    @include fonts(600, 11px, 15px, 0.1em, uppercase);
   }
   
   .uppertitle::before {
@@ -56,14 +53,11 @@
   .section-title {
     margin-bottom: 20px;
 
-    // @include fonts (700, )
-  
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.16;
-    letter-spacing: 0.05em;
+    @include fonts(700, 28px, 33px, 0.05em);
 
-
+    @include mq(desktop) {
+      font-size: 42px; 
+    }
   }
   
   .section-title--mode-light {
@@ -75,12 +69,12 @@
   }
   
   .subtitle {
-  //  @include fonts (null,  )
+  @include fonts(null, 16px, 26px, 0.02em);
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.67;
+  @include mq(desktop) {
+    font-size: 18px; 
   }
+}
   
   .subtitle-title--mode-light {
     color: #555555;

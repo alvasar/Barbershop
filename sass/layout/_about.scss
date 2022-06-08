@@ -1,7 +1,5 @@
 /*#region about*/
 .about {
-  // background-color: var(--main-bg-cl);
-
   &__container {
     @include mq(tablet) {
         display: flex;
@@ -15,11 +13,13 @@
       }
 
       @include mq(tablet) {
-        display: none;
+        margin-right: 30px;
       }
-    // display: flex;
-    // align-items: center;
-    // margin-right: 64px;
+
+      @include mq(desktop) {
+        display: flex;
+        margin-right: 64px;
+      }
     
   &__item:not(:last-child) {
     @include mq(tablet-only) {
@@ -28,43 +28,39 @@
   }
 
   &__item {
-    overflow: hidden;  
+    overflow: hidden; 
+    @include mq(desktop) {
+      margin-right: 30px;
+    } 
   }
 
   &__img {
-        // transition: transform var(--transition-duration) var(--transition-timing-function);
+        transition: transform var(--transition-duration) var(--transition-timing-function);
       }
 
       
   &__item:hover &__img {
-        // transform: scale(1.15)
+        transform: scale(1.15)
       }
 }
 
 
 .about__group {
   @include mq(tablet) {
-    width: 30px;
+    width: 330px;
   }
+
   @include mq(desktop) {
     width : 500px;
   }
-
-    // width: 500px;
-  }
+}
 
 .about__subtitle {
-    // margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
 .about__description {
-    // margin-bottom: 40px;
-  
-    // font-weight: 400;
-    // font-size: 14px;
-    // line-height: 1.86;
-    // letter-spacing: 0.02em;
-    // color: var(--main-txt-cl);
+    margin-bottom: 40px;
   }
   
   /*#endregion*/

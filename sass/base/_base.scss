@@ -9,9 +9,7 @@ html {
     background-color: var(--bg-color);
     color: var(--main-txt-cl); 
     font-family: var(--main-font);
-    font-size: 14px;
-    line-height: 1.86;
-    letter-spacing: 0.02em;
+    @include fonts(400, 14px, 26px, 0.02em);
   }
   
   h1,

@@ -1,8 +1,8 @@
 
 // breakpoints
-// 1 480px
-// 2. 768
-// 3. 1200
+// 1. 480px
+// 2. 768px
+// 3. 1200px
 
 .container {
     padding-left: 15px;
@@ -10,19 +10,21 @@
     
     margin-left: auto;
     margin-right: auto;
-   
-    // mobile sreen from 480px
-  @media screen and (min-width: 480px) {
-    width: 448px;
-  }
 
-  // tablet sreen from 468px
-  @media screen and (min-width: 768px) {
+   
+ // mobile sreen from 480px
+ @include mq(mobile) {
+      width: 448px;
+      outline: 1px solid tomato;
+    }
+
+  // tablet sreen from 768px
+  @include mq(tablet) {
     width: 720px;
   }
 
   // desktop sreen from 1200px
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     width: 1200px;
   }
 }
