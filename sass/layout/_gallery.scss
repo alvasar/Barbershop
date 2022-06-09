@@ -7,10 +7,20 @@
   }
   
   .gallery-list {
+    justify-content: center;
+
       &__item {
         position: relative;
       
-        --items: 4;
+        --items: 1;
+
+        @include mq(tablet) {
+          --items: 1;
+        }
+
+        @include mq(desktop) {
+          --items: 4;
+        }
       }
 
       &__item::before {
@@ -22,7 +32,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        // background-color: rgba(0, 0, 0, 0.5);
       }
   }
  
