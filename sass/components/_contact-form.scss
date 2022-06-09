@@ -2,13 +2,13 @@
   /*Contact-form */
   
   .contact-form {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 
     &__wrapper {
-        display:flex;
-        align-items: center;
-        margin-bottom: 44px;
+        // display:flex;
+        // align-items: center;
+        // margin-bottom: 44px;
       }
 
       &__group {
@@ -17,22 +17,19 @@
       }
 
       &__group:not(:last-child) {
-        margin-right: 30px;
+        // margin-right: 30px;
       }
 
       &__label {
         position: absolute;
         left: 0;
         top: 0;
-        
-        font-weight: 600;
-        font-size: 11px;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
+
+        @include fonts (600, 11px, 15px, 0.1em);
         text-transform: uppercase;
-        color: rgba(157, 164, 189, 0.4) ;
+        color: rgba(157, 164, 189, 0.4);
       
-        transform: translateY(-20px);
+        // transform: translateY(-20px);
       
         transition: 
         transform var(--transition-duration) var(--transition-timing-function),
@@ -46,7 +43,10 @@
       } 
 
       &__input {
-        width: 270px;
+        width: 100%;
+        margin-bottom: 44px;
+        
+        // width: 270px;
       
         color:#FFFFFF;
       
@@ -70,9 +70,11 @@
 
       &__icon {
         position: absolute;
-        top: 50%;
+        top: 20%;
+        // top: 50%;
         left: 0;
         fill:rgba(157, 164, 189, 0.4);
+        // transform: translateX(-50%);
       }
 
       &__input:focus ~&__icon, 
@@ -89,7 +91,7 @@
       &__label {
         position: absolute;
         left: 0;
-        top: -20px;
+        // top: -20px;
       
         transition: 
         color var(--transition-duration) var(--transition-timing-function);
