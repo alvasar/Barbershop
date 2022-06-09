@@ -9,28 +9,88 @@
     &__container {
         display: flex;
         align-items: center;  
+        position: relative;
       }
 }
   
 .logo {
-    margin-right: 71px;
+    margin-top: 20px;
+    // margin-right: 71px;
+  }
+
+  .logo__svg {
+    @include mq(mobile-only) {
+      fill: var(--main-bg-cl);
+    }
   }
   
+  
+.menu-button {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+
+  border: 0;
+  background-color: transparent;
+  fill: white;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.menu-button:hover .icon-menu,
+.menu-button:focus .icon-menu {
+  fill: var(--accent-cl);
+}  
+
+.menu-button:hover .icon-cross,
+.menu-button:focus .icon-cross {
+  fill: var(--accent-cl);
+}  
+
+.icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+
 .header__group {
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-      }
+  @include mq(mobile-only) {
+    display: none;
+  }
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+
+   @include mq(tablet-only) {
+    flex-direction: column-reverse;
+   }
+}
       
 .header__phone {
-        margin-right: 40px;
         display: block;
         color:var(--secondary-txt-cl);
         @include fonts (600, 12px, 1.33, 0.1em);
         text-decoration: none;
-        padding: 52px 0 52px 0;
       
         transition: color var(--transition-duration) var(--transition-timing-function);
+        
+        @include mq(tablet-only) {
+          margin-top: 20px;
+          }
+        @include mq(desktop) {
+        margin-right: 40px;
+        }
       }
       
       

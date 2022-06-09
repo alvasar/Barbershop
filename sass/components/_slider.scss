@@ -1,5 +1,11 @@
 /* Слайдер */
 
+.slider {
+  @include mq(mobile-only) {
+    display: none;
+  }
+}
+
 .slider__controls {
     position: absolute;
     right: 0;

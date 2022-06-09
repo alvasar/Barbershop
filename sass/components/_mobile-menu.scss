@@ -1,19 +1,26 @@
 .mobile-menu {
     position: fixed;
+    z-index: 9;
     top: 0;
-    left: 0;
+    right: 0;
 
-    width: 100%;
+    width: 337px;
     height: 100%;
     padding: 40px;
 
-    display: flex;
+
     flex-direction: column;
 
     background-color: #fff;
+    display: none;
+
+    &____contact {
+        margin-top: auto;
+    }
 }
 
-.mobile-menu__contact {
-    margin-top: auto;
-    
+.mobile-menu.is-open {
+    @include mq(mobile-only) {
+        display: flex;
+    }
 }

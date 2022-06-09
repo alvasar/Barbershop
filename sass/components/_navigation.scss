@@ -2,6 +2,19 @@
 .navigation__list {
     display: flex;
     align-items: center;
+
+    @include mq(mobile-only) {
+      display: none;
+    }
+
+    @include mq(tablet-only) {
+      margin-left: 40px;
+    }
+
+    @include mq(desktop) {
+     margin-left: 80px;
+    }
+
   }
   
   .navigation__item:not(:last-child) {

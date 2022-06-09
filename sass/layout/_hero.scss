@@ -1,17 +1,37 @@
 /*#region hero*/
 .hero {
-    max-width: 1280px;
-    min-height: 680px;
+    max-width: 480px;
+
+    min-height: 580px;
+
     margin: 0 auto;
   
     background-color: var(--dark-bg-cl);
     background-image:
       url('../images/slider/slider-img-3.jpg'),
       linear-gradient(to right, #fff 12%, #191C26 12%);
-    background-size: 1125px 680px, contain;
+    background-size: 480px 680px, contain;
     background-position: top right, center;
     background-repeat: no-repeat;
+
     
+    @include mq(tablet) {
+      min-height: 680px;
+
+      max-width: 720px;
+      background-image:
+      url('../images/slider/slider-img-3.jpg'),
+      linear-gradient(to right, #fff 15%, #191C26 15%);
+      background-size: 615px 680px, contain;
+
+    }
+    
+    @include mq(desktop) {
+      max-width: 1280px;
+      background-size: 1125px 680px, contain;
+
+    }
+
     &__container {
       display: flex;
       position: relative;
@@ -22,6 +42,10 @@
       align-items: flex-end;
         
       width: 100px;
+
+      @include mq(mobile-only) {
+        display: none;
+      }
     }
 
     &__list {
@@ -61,10 +85,20 @@
 
     &__group {
       flex-grow: 1;
-      
-      margin-left: 100px;
+      margin-left: 31px;
+      margin-top: 208px;
+      margin-bottom: 183px;
+
+      @include mq(tablet) {
       margin-top: 272px;
-      margin-bottom: 206px;
+      margin-left: 120px;
+      margin-bottom: 245px;
+      }
+
+      @include mq(desktop) {
+        margin-left: 100px;
+        margin-bottom: 206px;
+        }
     }
 
     &__uppertitle {
@@ -80,15 +114,15 @@
      
   .main-title {
     margin-bottom: 20px;
-  
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 1.18;
-    letter-spacing: 0.05em;
-  
+   
+    @include fonts(700, 48px, 56px, 0.05em); 
     color: var(--main-bg-cl);
-  
     animation: fade-left-to-right 1s ease-out;
+
+    @include mq(desktop) {
+      font-size: 72px;
+    }
+ 
   }
   
   /*#endregion*/
