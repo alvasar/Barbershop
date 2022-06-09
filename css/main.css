@@ -1161,6 +1161,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .contact-form__input {
+    width: 270px;
+  }
+}
+
 .contact-form__input:focus, .contact-form .contact-form__input:not(:placeholder-shown) {
   border-bottom: 1px solid #F7F7F7;
 }
@@ -1193,6 +1199,7 @@ img {
 }
 
 .contact-form__message {
+  display: block;
   position: relative;
   width: 100%;
   margin-bottom: 44px;
@@ -2166,6 +2173,12 @@ img {
 .contact--left-side {
   background-color: var(--dark-bg-cl);
   width: 418px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact--left-side {
+    width: 690px;
+  }
 }
 
 @media screen and (min-width: 1280px) {

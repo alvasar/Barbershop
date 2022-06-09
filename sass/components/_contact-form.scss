@@ -61,7 +61,10 @@
         @include mq(tablet) {
         width: 330px;
       }
-        
+
+      @include mq(desktop) {
+        width: 270px;
+      }
       
         color:#FFFFFF;
       
@@ -96,6 +99,8 @@
       }
       
       &__message {
+        display: block;
+
         position: relative;
         width: 100%;
         margin-bottom: 44px;
@@ -115,6 +120,7 @@
         color: var(--main-bg-cl);
       } 
 
+  
       &__message-input {
         padding: 5px;
         background-color: transparent;
