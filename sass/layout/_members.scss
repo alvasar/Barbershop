@@ -1,10 +1,14 @@
 /*#region members*/
 .member {
   background-color: var(--secondary-bg-cl);
-
+justify-content: center;
      /* member-card */
   &__item {
-    --items:3;
+    --items:1;
+
+    @include mq(desktop) {
+      --items:3;
+    }
   }
 
   &__img {

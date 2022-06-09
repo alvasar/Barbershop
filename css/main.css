@@ -1992,11 +1992,20 @@ img {
 /*#region members*/
 .member {
   background-color: var(--secondary-bg-cl);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /* member-card */
 }
 
 .member__item {
-  --items:3;
+  --items:1;
+}
+
+@media screen and (min-width: 1280px) {
+  .member__item {
+    --items:3;
+  }
 }
 
 .member__img {
