@@ -2,13 +2,19 @@
   /*Contact-form */
   
   .contact-form {
-    // display: flex;
-    // flex-direction: column;
+    @include mq(desktop) {
+    display: flex;
+    flex-direction: column;
+    }
+
 
     &__wrapper {
-        // display:flex;
-        // align-items: center;
-        // margin-bottom: 44px;
+      @include mq(tablet) {
+        display:flex;
+        align-items: center;
+        margin-bottom: 44px;
+      }
+
       }
 
       &__group {
@@ -17,7 +23,9 @@
       }
 
       &__group:not(:last-child) {
-        // margin-right: 30px;
+        @include mq(tablet) {
+        margin-right: 30px;
+        }
       }
 
       &__label {
@@ -28,12 +36,16 @@
         @include fonts (600, 11px, 15px, 0.1em);
         text-transform: uppercase;
         color: rgba(157, 164, 189, 0.4);
-      
-        // transform: translateY(-20px);
+
+        @include mq(tablet) {
+        transform: translateY(-20px);
       
         transition: 
         transform var(--transition-duration) var(--transition-timing-function),
         color var(--transition-duration) var(--transition-timing-function);
+        }
+      
+        
       }
 
       &__input:focus+&__label, 
@@ -45,8 +57,11 @@
       &__input {
         width: 100%;
         margin-bottom: 44px;
+
+        @include mq(tablet) {
+        width: 330px;
+      }
         
-        // width: 270px;
       
         color:#FFFFFF;
       
@@ -71,11 +86,9 @@
       &__icon {
         position: absolute;
         top: 20%;
-        // top: 50%;
         left: 0;
         fill:rgba(157, 164, 189, 0.4);
-        // transform: translateX(-50%);
-      }
+     }
 
       &__input:focus ~&__icon, 
       &__input:not(:placeholder-shown) {
@@ -91,7 +104,7 @@
       &__label {
         position: absolute;
         left: 0;
-        // top: -20px;
+        top: -20px;
       
         transition: 
         color var(--transition-duration) var(--transition-timing-function);
