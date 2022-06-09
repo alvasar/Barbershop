@@ -1,19 +1,44 @@
 /*#region contacts*/
 .contacts {
-    background-color: var(--dark-bg-cl);
+  background-image:
+  url('../images/contact/Bg.png'),
+  linear-gradient(to top, #fff 0%, #191C26 0%);
+background-size: 480px 680px, contain;
+background-position: bottom right, center;
+background-repeat: no-repeat;
+
+
+
+
+    // background-color: var(--dark-bg-cl);
   
-    background-image: url('../images/contact/Bg.png');
-    background-repeat: no-repeat;
-    background-position: top left calc(50% + 312px);
-    
+    // background-image: url('../images/contact/Bg.png');
+    // background-repeat: no-repeat;
+    // background-position: bottom;
+    @include mq (mobile-only) {
+      background-size: contain;
+    }
+    @include mq (tablet) {
+      background-size: contain;
+    }
+
+    @include mq(desktop) {
+      background-position: top left calc(50% + 312px);
+    }
+
+  
     &__container {
-        // display: flex;
+      @include mq(desktop) {
+        display: flex;
+      }
       }
   }
   
   
   .contact {
-    // width: calc(100%/2);
+    @include mq(desktop) {
+      width: calc(100%/2);
+    }
   
     &__time-title {
       @include fonts(600, 11px, 15px, 0.1em);
@@ -51,7 +76,10 @@
   }
 
   .contact--right-side {
-    margin-left: 100px;
+
+    @include mq(desktop) {
+      margin-left: 100px;
+    }
   }
   
   .icons-list {

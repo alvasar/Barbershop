@@ -1254,7 +1254,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 84px;
   min-width: 200px;
   -webkit-transition: background-color var(--transition-duration) var(--transition-timing-function);
   transition: background-color var(--transition-duration) var(--transition-timing-function);
@@ -2147,10 +2147,43 @@ img {
 /*#endregion*/
 /*#region contacts*/
 .contacts {
-  background-color: var(--dark-bg-cl);
-  background-image: url("../images/contact/Bg.png");
+  background-image: url("../images/contact/Bg.png"), -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(0%, #191C26));
+  background-image: url("../images/contact/Bg.png"), linear-gradient(to top, #fff 0%, #191C26 0%);
+  background-size: 480px 680px, contain;
+  background-position: bottom right, center;
   background-repeat: no-repeat;
-  background-position: top left calc(50% + 312px);
+}
+
+@media screen and (max-width: 767.98px) {
+  .contacts {
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts {
+    background-position: top left calc(50% + 312px);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contact {
+    width: calc(100%/2);
+  }
 }
 
 .contact__time-title {
@@ -2198,8 +2231,10 @@ img {
   }
 }
 
-.contact--right-side {
-  margin-left: 100px;
+@media screen and (min-width: 1280px) {
+  .contact--right-side {
+    margin-left: 100px;
+  }
 }
 
 .icons-list {
