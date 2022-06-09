@@ -8,11 +8,16 @@
 
 .slider__controls {
     position: absolute;
-    right: 0;
+    right: 39px;
     bottom: 40px;
   
     display: flex;
     align-items: center;
+
+    @include mq(desktop) {
+      right: 0;
+      bottom: 40px;
+    }
   }
   
   .slider__item-controls:not(:last-child) {
@@ -47,10 +52,14 @@
   .slider__pagination {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 39px;
     transform: translateY(-50%);
     flex-direction: column;
     width: 18px;
+
+    @include mq(desktop) {
+      right: 0;
+    }
   }
   
   .slider__item {

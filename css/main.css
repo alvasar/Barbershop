@@ -1244,7 +1244,7 @@ img {
 
 .slider__controls {
   position: absolute;
-  right: 0;
+  right: 39px;
   bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1252,6 +1252,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .slider__controls {
+    right: 0;
+    bottom: 40px;
+  }
 }
 
 .slider__item-controls:not(:last-child) {
@@ -1284,7 +1291,7 @@ img {
 .slider__pagination {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 39px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-box-orient: vertical;
@@ -1292,6 +1299,12 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 18px;
+}
+
+@media screen and (min-width: 1280px) {
+  .slider__pagination {
+    right: 0;
+  }
 }
 
 .slider__item {
@@ -1651,7 +1664,7 @@ img {
   .hero__group {
     margin-top: 272px;
     margin-left: 120px;
-    margin-bottom: 245px;
+    margin-bottom: 181px;
   }
 }
 
@@ -1783,34 +1796,58 @@ img {
 }
 
 .price-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 50px;
-}
-
-.price-list__item {
-  width: calc(100%/2);
-}
-
-.price-list__item--left-side {
   background: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  font-size: 14px;
+  padding: 30px 30px;
+  padding-bottom: 0;
 }
 
-.price-list__item--right-side {
-  background: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
-  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+@media screen and (min-width: 1280px) {
+  .price-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: transparent;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .price-list__item {
+    width: calc(100%/2);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .price-list__item--left-side {
+    background: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .price-list__item--right-side {
+    background: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .price-list__inner-list {
   width: 100%;
   height: 100%;
-  padding: 30px 40px;
   display: block;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 1280px) {
+  .price-list__inner-list {
+    padding: 30px 40px;
+  }
 }
 
 .price-list__inner-item {

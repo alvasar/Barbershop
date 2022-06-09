@@ -1,5 +1,8 @@
 /*#region hero*/
 .hero {
+
+
+
     max-width: 480px;
 
     min-height: 580px;
@@ -92,7 +95,7 @@
       @include mq(tablet) {
       margin-top: 272px;
       margin-left: 120px;
-      margin-bottom: 245px;
+      margin-bottom: 181px;
       }
 
       @include mq(desktop) {
