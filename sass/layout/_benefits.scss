@@ -3,8 +3,15 @@
     background-color: var(--main-bg-cl);
 
     &__container {
-        // display: flex;
-        justify-content: center;
+
+      display: flex;
+      justify-content: center;
+
+      flex-direction: column-reverse;
+
+      @include mq(desktop) {
+        flex-direction: row;
+      }
       }
   }
     
@@ -13,6 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    margin-left: auto;
 
     &__item {
         width: 170px;
@@ -63,7 +71,12 @@
   
   .benefits-group {
     width: 500px;
+    margin-bottom: 44px;
+
+    @include mq(desktop) {
     margin-left: 130px;
+    }
+    
   }
   
   /*#endregion*/

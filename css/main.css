@@ -1901,9 +1901,25 @@ img {
 }
 
 .benefits__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 1280px) {
+  .benefits__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .benefits-list {
@@ -1916,6 +1932,7 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-left: auto;
 }
 
 .benefits-list__item {
@@ -1962,7 +1979,13 @@ img {
 
 .benefits-group {
   width: 500px;
-  margin-left: 130px;
+  margin-bottom: 44px;
+}
+
+@media screen and (min-width: 1280px) {
+  .benefits-group {
+    margin-left: 130px;
+  }
 }
 
 /*#endregion*/
