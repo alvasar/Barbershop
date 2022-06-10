@@ -6,6 +6,11 @@
     text-decoration: none;
     color: currentColor;
   }
+
+  .link:hover,
+  .link:focus {
+    color:var(--accent-cl);
+  }
   
 .list {
     list-style: none;

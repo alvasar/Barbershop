@@ -1,29 +1,18 @@
 /*#region contacts*/
 .contacts {
-  background-image:
-  url('../images/contact/Bg.png'),
-  linear-gradient(to top, #fff 0%, #191C26 0%);
-background-size: 480px 680px, contain;
-background-position: bottom right, center;
-background-repeat: no-repeat;
+    background-image: url('../images/contact/Bg.png');
+    background-size: 480px 680px contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-color: var(--dark-bg-cl); 
 
-
-
-
-    // background-color: var(--dark-bg-cl);
-  
-    // background-image: url('../images/contact/Bg.png');
-    // background-repeat: no-repeat;
-    // background-position: bottom;
-    @include mq (mobile-only) {
-      background-size: contain;
-    }
+    
     @include mq (tablet) {
-      background-size: contain;
+      background-size: 768px 960px;
     }
 
     @include mq(desktop) {
-      background-position: top left calc(50% + 312px);
+    background-position: top left calc(50% + 312px);
     }
 
   

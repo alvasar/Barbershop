@@ -4,7 +4,7 @@
     top: 0;
     width: 100vw;
     /* background-color: rgba(24, 27, 37, 0.4); */
-    z-index: 10;
+    z-index: 1;
 
     &__container {
         display: flex;
@@ -25,45 +25,6 @@
   }
   
   
-.menu-button {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  bottom: 0;
-  right: 30px;
-
-  border: 0;
-  background-color: transparent;
-  fill: white;
-
-  @include mq(tablet) {
-    display: none;
-  }
-}
-
-.menu-button:hover .icon-menu,
-.menu-button:focus .icon-menu {
-  fill: var(--accent-cl);
-}  
-
-.menu-button:hover .icon-cross,
-.menu-button:focus .icon-cross {
-  fill: var(--accent-cl);
-}  
-
-.icon-cross {
-  display: none;
-}
-
-.menu-button.is-open .icon-cross {
-  display: block;
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
-}
-
-
 .header__group {
   @include mq(mobile-only) {
     display: none;

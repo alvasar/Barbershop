@@ -16,8 +16,42 @@
       color: var(--secondary-txt-cl);
     }
   }
-  
 
   
+.menu-button {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  right: 30px;
 
-  
+  border: 0;
+  background-color: transparent;
+  fill: white;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.menu-button:hover .icon-menu,
+.menu-button:focus .icon-menu {
+  fill: white;
+}  
+
+.menu-button:hover .icon-cross,
+.menu-button:focus .icon-cross {
+  fill: var(--btn-dark-cl);
+}  
+
+.icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}

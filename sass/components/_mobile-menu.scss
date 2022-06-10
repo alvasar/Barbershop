@@ -1,6 +1,6 @@
 .mobile-menu {
     position: fixed;
-    z-index: 9;
+    z-index: 1;
     top: 0;
     right: 0;
 
@@ -8,15 +8,49 @@
     height: 100%;
     padding: 40px;
 
-
+    display: flex;
     flex-direction: column;
 
     background-color: #fff;
     display: none;
 
-    &____contact {
-        margin-top: auto;
+    &__nav {
+        padding-top: 78px;
+        @include fonts(600, 18px, 50px, 0.1em);
+        text-align: left;
+        color: var(--btn-dark-cl);  
+        margin-bottom: 64px;
     }
+
+    &__contact {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__phone-link {
+        @include fonts(600, 18px, 25px, 0.1em);
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--btn-dark-cl);
+        margin-bottom: 24px; 
+    }
+
+    &__btn {
+        display: block;
+        margin-bottom: 64px;
+    }
+
+
+    &__socials {
+        @include fonts(600, 14px, 50px, 0.2em);
+        color: var(--btn-dark-cl);
+    }
+
+    &__item:last-child {
+        margin-right: auto;
+    }
+
 }
 
 .mobile-menu.is-open {
@@ -24,3 +58,4 @@
         display: flex;
     }
 }
+

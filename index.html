@@ -32,29 +32,31 @@
     </svg>
     </button>
           
-    <div class="mobile-menu" id="menu-container" data-menu>
-      <ul class="mobile-menu__nav">
+    <div class="mobile-menu" id="mobile-menu" data-menu>
+      <ul class="mobile-menu__nav list">
         <li class="mobile-menu__item">
-          <a href="" class="mobile-menu__link">Студия</a>
+          <a href="" class="mobile-menu__link link" href="#about">О нас</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="" class="mobile-menu__link">Портфолио</a>
+          <a href="" class="mobile-menu__link link" href="#price">Услуги и цены</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="" class="mobile-menu__link">Контакты</a>
+          <a href="" class="mobile-menu__link link" href="#team">Мастера</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__link link" href="#contact">Контакты</a>
         </li>
       </ul>
-      <ul class="mobile-menu__contact">
-        <li class="mobile-menu__item"><a href="" class="mobile-menu__link"></a>+38096 111 11 11</li>
-        <li class="mobile-menu__item"><a href="" class="mobile-menu__link"></a>info@devstudio.com</li>
+      <ul class="mobile-menu__contact list">     
+        <li class="mobile-menu__phone-link"><a  href="tel:+380961111111" class="mobile-menu__link link"></a>+38096 111 11 11</li>
       </ul>
-      <ul class="mobile-menu__socials">
-        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Instagram</a></li>
-        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Twitter</a></li>
-        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Facebook</a></li>
-        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Linkedin</a></li>
+      <button class="btn btn btn--mode-light mobile-menu__btn" data-modal-open type="button">Онлайн запись</button>
+
+      <ul class="mobile-menu__socials list">
+        <li class="mobile-menu__item"><a  href="http://" target="_blank" rel="noopener noreferrer" class="mobile-menu__link link uppertitle uppertitle--mode-light">Instagram</a></li>
+        <li class="mobile-menu__item"><a  href="http://" target="_blank" rel="noopener noreferrer" class="mobile-menu__link link">Yotube</a></li>
       </ul>
-    </div>
+   </div>
 
     <nav class="navigation">
       <ul class="navigation__list list">
@@ -306,7 +308,7 @@
       </section>
 
       <!-- section about -->
-      <!-- <section class="section about" id="about">
+      <section class="section about" id="about">
         <div class="container about__container">
         <ul class="about-list list">
           <li class="about-list__item">
@@ -342,10 +344,10 @@
             </p>
         <button class="btn btn--mode-light" type="button">Онлайн запись</button>
         </div>
-      </section> -->
+      </section>
 
       <!-- section services -->
-      <!-- <section class="section services" id="price">
+      <section class="section services" id="price">
         <div class="container">
         <p class="uppertitle uppertitle--mode-dark">Проведи время в компании лучших мастеров</p>
         <h2 class="section-title section-title--mode-dark">Услуги и цены</h2>
@@ -369,10 +371,10 @@
         </ul>
         <button class="btn btn--mode-dark services__btn" type="button">Онлайн запись</button>
         </div>
-      </section> -->
+      </section>
 
       <!-- benefits -->
-      <!-- <section class="section benefits">
+      <section class="section benefits">
         <div class="container benefits__container">
         <ul class="benefits-list list">
           <li class="benefits-list__item">
@@ -401,10 +403,10 @@
         </p>
       </div>
        </div>
-      </section> -->
+      </section>
 
       <!-- members -->
-      <!-- <section class="section members" id="team">
+      <section class="section members" id="team">
         <div class="container">
         <p class="uppertitle uppertitle--mode-light">для настоящих ценителей атмосферы</p>
         <h2 class="section-title section-title--mode-light">Наши мастера</h2>
@@ -487,10 +489,10 @@
         </ul>
        </div>
      
-      </section> -->
+      </section>
 
       <!-- gallery -->
-      <!-- <section class="section gallery">
+      <section class="section gallery">
         <div class="container">
         <p class="uppertitle uppertitle--mode-light gallery-uppertitle">На латинском языке “барба” означает “борода”</p>
         <h2 class="title visually-hidden visually-hidden" >Примеры наших работ</h2>   
@@ -509,7 +511,7 @@
           </li>
         </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- contacts -->
       <section class="section contacts" id="contact">
@@ -600,7 +602,7 @@
         </div>
       </section>
     </main>
-    <!--footer  -->
+    <!--footer-->
     <footer class="footer">
       <div class="container footer__container">
       <p class="footer__copyright">&#169; Copyright 2020</p>
