@@ -1516,7 +1516,6 @@ img {
   font-size: 18px;
   line-height: 1.39;
   letter-spacing: 0.1em;
-  text-align: center;
   text-transform: uppercase;
   color: var(--btn-dark-cl);
   margin-bottom: 24px;
@@ -1524,7 +1523,6 @@ img {
 
 .mobile-menu__btn {
   display: block;
-  margin-left: 40px;
   margin-bottom: 64px;
 }
 
