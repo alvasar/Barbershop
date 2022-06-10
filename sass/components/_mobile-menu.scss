@@ -23,7 +23,7 @@
     }
 
     &__contact {
-        margin-top: auto;
+        // margin-top: auto;
         display: flex;
         flex-direction: column;
     }
@@ -38,6 +38,7 @@
 
     &__btn {
         display: block;
+        margin-left: 40px;
         margin-bottom: 64px;
     }
 
@@ -47,9 +48,6 @@
         color: var(--btn-dark-cl);
     }
 
-    &__item:last-child {
-        margin-right: auto;
-    }
 
 }
 
