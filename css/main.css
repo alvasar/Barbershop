@@ -358,16 +358,6 @@ img {
   padding: 0;
 }
 
-.js-no-transparency {
-  -webkit-transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-backdrop-filter var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-backdrop-filter var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), backdrop-filter var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), backdrop-filter var(--transition-duration) var(--transition-timing-function), -webkit-backdrop-filter var(--transition-duration) var(--transition-timing-function);
-  background-color: rgba(16, 18, 27, 0.4);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -777,8 +767,8 @@ img {
 */
 .scroll-to-top {
   position: fixed;
-  bottom: 90px;
-  right: 30px;
+  bottom: 80px;
+  right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -796,6 +786,12 @@ img {
   cursor: pointer;
   -webkit-animation: slide-top 1s linear 2s infinite alternate both;
           animation: slide-top 1s linear 2s infinite alternate both;
+}
+
+@media screen and (min-width: 1280px) {
+  .scroll-to-top {
+    right: 30px;
+  }
 }
 
 .arrow-top {
@@ -1473,7 +1469,7 @@ img {
 
 .mobile-menu {
   position: fixed;
-  z-index: 1;
+  z-index: 9;
   top: 0;
   right: 0;
   width: 337px;
@@ -1499,9 +1495,11 @@ img {
   text-align: left;
   color: var(--btn-dark-cl);
   margin-bottom: 64px;
+  z-index: 1;
 }
 
 .mobile-menu__contact {
+  margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2254,7 +2252,6 @@ img {
 
 .contact--left-side {
   background-color: var(--dark-bg-cl);
-  width: 418px;
 }
 
 @media screen and (min-width: 768px) {

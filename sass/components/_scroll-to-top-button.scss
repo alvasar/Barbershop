@@ -5,8 +5,12 @@
 */
 .scroll-to-top {
     position: fixed;
-    bottom: 90px;
+    bottom: 80px;
+    right: 100px;
+
+    @include mq(desktop) {
     right: 30px;
+    }
   
     display: flex;
     align-items: center;
