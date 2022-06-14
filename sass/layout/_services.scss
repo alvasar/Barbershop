@@ -4,13 +4,34 @@
     margin-left: auto;
     margin-right: auto;
   
-    background-image: url('../images/price/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(17, 19, 25, 1);
     background-position: center;
+    // Загрузка фонового изображения для мобильного
+    background-image: url('../images/price/price-bg_sm.png'), linear-gradient(to bottom, #191c26, #191c26);
+    // Загрузка 2х ретина  изображения для мобильного
+  @include mq(retina) {
+    background-image: url('../images/price/price-bg_sm@2x.png'), linear-gradient(to bottom, #191c26, #191c26);
+  }
+    // Загрузка фонового изображения для таблетки
+  @include mq(tablet) {
+    background-image: url('../images/price/price-bg_md.png'), linear-gradient(to bottom, #191c26, #191c26);
+    // Загрузка 2х ретина изображения для таблетки
+    @include mq(retina) {
+      background-image: url('../images/price/price-bg_md@2x.png'), linear-gradient(to bottom, #191c26, #191c26);
+    }
+  }
+    // Загрузка фонового изображения для desktop
+  @include mq(desktop) {
+    background-image: url('../images/price/price-bg_lg.png'), linear-gradient(to bottom, #191c26, #191c26);
+    // Загрузка 2x ретина изображения для desktop
+    @include mq(retina) {
+      background-image: url('../images/price/price-bg_lg@2x.png'), linear-gradient(to bottom, #191c26, #191c26);
+    }
+  }
   }
   
+
   .price-list {
     align-items: center;
     margin-bottom: 50px;
