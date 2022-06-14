@@ -497,17 +497,179 @@
         <h2 class="title visually-hidden visually-hidden" >Примеры наших работ</h2>   
         <ul class="gallery-list list grid">
           <li class="gallery-list__item grid-item">
-            <img class="gallery-list__img" src="./images/gallery/Rectangle25.jpg" alt="Rectangle25" width="270" height="360" />
+            <picture>   
+              <!-- Набор изображений для destop -->
+              <source 
+              media="(min-width:1200px)" 
+              srcset="
+              ../images/gallery/gallery-1_lg.jpg 1x,
+              ../images/gallery/gallery-1_lg@2x.jpg 2x
+              " 
+              type="image/jpg" 
+              />
+              <!-- Набор изображений для таблетки -->
+              <source 
+              media="(min-width:768px)" 
+              srcset="
+              ../images/gallery/gallery-1_md.jpg 1x,
+              ../images/gallery/gallery-1_md@2x.jpg 2x
+              " 
+              type="image/jpg"
+              />
+              <!-- Набор изображений для мобилки -->
+              <source 
+              media="(max-width:767px)" 
+              srcset="
+              ../images/gallery/gallery-1_sm.jpg 1x,
+              ../images/gallery/gallery-1_sm@2x.jpg 2x
+              " 
+              type="image/jpg" 
+              />
+            <!-- Дефолтное изображение -->
+            <img class="gallery-list__img" 
+            src="./images/gallery/gallery-1_sm.jpg" 
+            alt="" 
+            width="418" 
+            height="360"
+            loading="lazy"
+            />
+          </picture>
           </li>
           <li class="gallery-list__item  grid-item">
-            <img class="gallery-list__img" src="./images/gallery/Rectangle26.jpg" alt="Rectangle25" width="270" height="360"/>
-          </li>
+            <picture>
+               
+              <!-- Набор изображений для destop -->
+
+              <source 
+              media="(min-width:1200px)" 
+              srcset="
+              ../images/gallery/gallery-2_lg.jpg 1x,
+              ../images/gallery/gallery-2_lg@2x.jpg 2x
+              " 
+              type="image/jpg" 
+              />
+
+              <!-- Набор изображений для таблетки -->
+
+              <source 
+              media="(min-width:768px)" 
+              srcset="
+              ../images/gallery/gallery-2_md.jpg 1x,
+              ../images/gallery/gallery-2_md@2x.jpg 2x
+              " 
+              type="image/jpg"
+              />
+              <!-- Набор изображений для мобилки -->
+
+              <source 
+              media="(max-width:767px)" 
+              srcset="
+              ../images/gallery/gallery-2_sm.jpg 1x,
+              ../images/gallery/gallery-2_sm@2x.jpg 2x
+              " 
+              type="image/jpg" 
+              />
+           
+            <!-- Дефолтное изображение -->
+            <img class="gallery-list__img" 
+            src="./images/gallery/gallery-2_sm.jpg" 
+            alt="" 
+            width="418" 
+            height="360"
+            loading="lazy"
+            />
+          </picture>
+          </li> 
           <li class="gallery-list__item  grid-item">
-            <img class="gallery-list__img" src="./images/gallery/Rectangle27.jpg" alt="Rectangle25" width="270" height="360"/>
-          </li>
+            <picture>
+               
+              <!-- Набор изображений для destop -->
+
+              <source 
+              media="(min-width:1200px)" 
+              srcset="
+              ../images/gallery/gallery-3_lg.jpg 1x,
+              ../images/gallery/gallery-3_lg@2x.jpg 2x
+              " 
+              type="image/jpg" 
+              />
+
+              <!-- Набор изображений для таблетки -->
+
+              <source 
+              media="(min-width:768px)" 
+              srcset="
+              ../images/gallery/gallery-3_md.jpg 1x,
+              ../images/gallery/gallery-3_md@2x.jpg 2x
+              " 
+              type="image/jpg"
+              />
+              <!-- Набор изображений для мобилки -->
+
+              <source 
+              media="(max-width:767px)" 
+              srcset="
+              ../images/gallery/gallery-3_sm.jpg 1x,
+              ../images/gallery/gallery-3_sm@2x.jpg 2x
+              " 
+              type="image/jpg" 
+              />
+           
+            <!-- Дефолтное изображение -->
+            <img class="gallery-list__img" 
+            src="./images/gallery/gallery-3_sm.jpg" 
+            alt="" 
+            width="418" 
+            height="360"
+            loading="lazy"
+            />
+          </picture>
+          </li>        
           <li class="gallery-list__item  grid-item">
-            <img class="gallery-list__img" src="./images/gallery/Rectangle28.jpg" alt="Rectangle25" width="270" height="360"/>
-          </li>
+            <picture>
+               
+              <!-- Набор изображений для destop -->
+
+              <source 
+              media="(min-width:1200px)" 
+              srcset="
+              ../images/gallery/gallery-4_lg.jpg 1x,
+              ../images/gallery/gallery-4_lg@2x.jpg 2x
+              " 
+              type="image/jpg" 
+              />
+
+              <!-- Набор изображений для таблетки -->
+
+              <source 
+              media="(min-width:768px)" 
+              srcset="
+              ../images/gallery/gallery-4_md.jpg 1x,
+              ../images/gallery/gallery-4_md@2x.jpg 2x
+              " 
+              type="image/jpg"
+              />
+              <!-- Набор изображений для мобилки -->
+
+              <source 
+              media="(max-width:767px)" 
+              srcset="
+              ../images/gallery/gallery-4_sm.jpg 1x,
+              ../images/gallery/gallery-4_sm@2x.jpg 2x
+              " 
+              type="image/jpg" 
+              />
+           
+            <!-- Дефолтное изображение -->
+            <img class="gallery-list__img" 
+            src="./images/gallery/gallery-4_sm.jpg" 
+            alt="" 
+            width="418" 
+            height="360"
+            loading="lazy"
+            />
+          </picture>
+          </li>  
         </ul>
         </div>
       </section>
