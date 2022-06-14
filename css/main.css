@@ -2242,6 +2242,20 @@ img {
   height: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  .gallery-list__img {
+    width: 330px;
+    height: 360px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery-list__img {
+    width: 270px;
+    height: 360px;
+  }
+}
+
 /*#endregion*/
 /*#region contacts*/
 .contacts {
