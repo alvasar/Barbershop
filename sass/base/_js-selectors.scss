@@ -1,6 +1,12 @@
-    .js-no-transparency {
-    transition: background-color var(--transition-duration) var(--transition-timing-function), 
-    backdrop-filter var(--transition-duration) var(--transition-timing-function);
-    background-color: rgba(16, 18, 27, 0.4);
-    backdrop-filter: blur(10px);
-  }
+.no-scroll {
+  overflow: hidden;
+}
+
+
+
+.js-no-transparency {
+  transition: background-color var(--transition-duration) var(--transition-timing-function), 
+  backdrop-filter var(--transition-duration) var(--transition-timing-function);
+  background-color: rgba(16, 18, 27, 0.4);
+  backdrop-filter: blur(10px);
+}

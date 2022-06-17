@@ -2,14 +2,15 @@
 .header {
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100vh;
+    // min-height: 80px;
+
     /* background-color: rgba(24, 27, 37, 0.4); */
     z-index: 1;
 
     &__container {
         display: flex;
         align-items: center;  
-        position: relative;
       }
 }
   
